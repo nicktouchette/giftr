@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "5.3"
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: MSAR4d1p9KOIgEsyZznTW2usTHU1Rv0Q59f9Qh1YciU90j5Oz3TRZpn1GrmJHM1s+djvMwA3x70d+Qylms4PrYqmY7iK6dJKsDTi9HSqLrHD8mpzfQ8GWpVaXLwnc5ZTKMmQ7DJQqSsWCj/j8KemG+fWJ+2q5VZ2OOFcpThm6p6YiFVsKkG/fpbIEdSCXH+bFnu26aXN8OfeD0AHmj3BqHeODE++w2VIWowZzKW3h1rTjjtWfqc5xKE/tUQTmr3V7RSNDQ9shPBujUk3zgSnCn44eprGXDxDViB9mkuzDThRoGnmDbx91bv1tr4B90bPRFxbtZmC/qjCrK+bDNNGjZXmWJ60VvWls8hvYrUHDHD8VeIN9FLjsCiNei6LyflCV5aEffeXO9l7uego5F3jbnmI1L8OVXp3dSS1fdWSYOJI0I1gJHsI6c4L6AUBrqoyZLqY0WfTzLBCxoBVgeyEKTYJ/Mo3CpP8YCDL4w/H5zbpwvh/SXZTFbDKtOYc/EZE4OYe/kd0MOfW8NzGm8CBCaZjzOeo1AULiNGvbU/FMMZ1p/WJLHvi9D6fnM2yHmp3reJsIs+lPW+OazXvUyJmJSR46aXdjVOVaG9E8K5CC6bHZo7WUBNhXi5K66OLmQhQ1feFmk75J+8EOKomYLsEzaXEdb4MsLkB+aS9EM6SguQ=
+  app:
+    master: project3-staging
+    production: project3-production
