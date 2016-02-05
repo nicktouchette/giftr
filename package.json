@@ -13,5 +13,10 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "karma-jasmine": "^0.3.7",
+    "karma": "^0.13.19"
   }
 }
