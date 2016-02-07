@@ -27,6 +27,9 @@ gulp.task('test', function() {
   env({vars: {ENV:'Test'}});
   gulp.src('tests/*.js', {read: false})
     .pipe(gulpMocha({reporter: 'nyan'}))
+    .once('end', function () {
+      process.exit();
+    });
 });
 
 // gulp.task("default", ["hello"], function() {
