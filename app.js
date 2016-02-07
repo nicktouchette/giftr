@@ -1,12 +1,19 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express = require('express'),
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    mongoose = require('mongoose');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+if(process.env.ENV == 'Test')
+  var db = mongoose.connect('mongodb://localhost/giftAPI_test');
+else {
+  var db = mongoose.connect('mongodb://localhost/giftAPI');
+}
+
+// Define Mongoose Schemas
+var User = require('./models/user');
 
 var app = express();
 
@@ -22,8 +29,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Define routers and attach a mongoose Model
+var routes = require('./routes/index');
+var usersRouter = require('./routes/usersRoute')(User);
+
+// Define a router path
 app.use('/', routes);
-app.use('/users', users);
+app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
