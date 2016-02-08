@@ -1,18 +1,14 @@
 'use strict';
 
-var gulp   = require('gulp');
-var concat = require('gulp-concat');
-var sass   = require('gulp-sass');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var maps   = require('gulp-sourcemaps');
-var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
+
+var gulp      = require('gulp'),
+    maps      = require('gulp-sourcemaps'),
+    concat    = require('gulp-concat'),
+    sass      = require('gulp-sass'),
+    uglify    = require('gulp-uglify'),
+    rename    = require('gulp-rename'),
     gulpMocha = require('gulp-mocha'),
-    env = require('gulp-env'),
+    env       = require('gulp-env'),
     supertest = require('supertest');
 
 // gulp.task("concatScripts", function() {
