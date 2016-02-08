@@ -2,3 +2,7 @@
 @import 'neat';
 @import '_variables';
 @import '_layout';
+
+body {
+  font-family: $helvetica;
+}
