@@ -1,25 +1,29 @@
 'use strict';
 
-var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
+
+var gulp      = require('gulp'),
+    maps      = require('gulp-sourcemaps'),
+    concat    = require('gulp-concat'),
+    sass      = require('gulp-sass'),
+    uglify    = require('gulp-uglify'),
+    rename    = require('gulp-rename'),
     gulpMocha = require('gulp-mocha'),
-    env = require('gulp-env'),
+    env       = require('gulp-env'),
     supertest = require('supertest');
 
-gulp.task("concatScripts", function() {
-  gulp.src([])
-  .pipe(concat("main.js"))
-  .pipe(gulp.dest("public/js"));
-});
+// gulp.task("concatScripts", function() {
+//   gulp.src([])
+//   .pipe(concat("main.js"))
+//   .pipe(gulp.dest("public/js"));
+// });
 
 gulp.task("compileSass", function() {
   gulp.src("scss/style.scss")
+  .pipe(maps.init())
   .pipe(sass({
     includePaths: require('node-neat').includePaths
   }))
+  .pipe(maps.write('./'))
   .pipe(gulp.dest("public/stylesheets"))
 });
 
