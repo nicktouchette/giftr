@@ -305,7 +305,7 @@ Gift.remove({})
                                      },
                                rating: 3
                             });
-    var hockyPuck = new Gift({name: 'Autographed St. Louis Blues Hockey Puck',
+    var hockeyPuck = new Gift({name: 'Autographed St. Louis Blues Hockey Puck',
                                price: '50-200',
                                categories: ['sports'],
                                recipientType: ['friend'],
@@ -317,6 +317,32 @@ Gift.remove({})
                                       adjectives: ['sporty'],
                                      },
                                rating: 2
+                            });
+    var wiecoArt = new Gift({name: 'Wieco Art 5 Panels Abstract Paintings',
+                               price: '<50',
+                               categories: ['home'],
+                               recipientType: ['friend', 'SO'],
+                               link: 'http://www.amazon.com/Wieco-Art-Abstract-Paintings-Decoration/dp/B00G1X7KWG/ref=sr_1_2?ie=UTF8&qid=1454968931&sr=8-2&keywords=wieco+art+5+panels',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/51Ax%2BQKrt7L.jpg',
+                               description: 'High quality 100% Hand-painted oil paintings on canvas painted by our professional artist with years of oil painting experience. A great gift idea for your relatives and friends.',
+                               tags: {gender: ['men', 'women'],
+                                      ageRange: ['40+'],
+                                      adjectives: ['shy', 'nerdy'],
+                                     },
+                               rating: 4
+                            });
+    var canopy = new Gift({name: 'Caravan Canopy',
+                               price: '50-200',
+                               categories: ['garden'],
+                               recipientType: ['family'],
+                               link: 'http://www.amazon.com/Caravan-Canopy-Titanshade-10-Feet-White/dp/B0072BVOL4/ref=sr_1_4?ie=UTF8&qid=1454969181&sr=8-4&keywords=caravan+canopy+display+shade+kit+tent',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/51w7FJj5sSL._SL1000_.jpg',
+                               description: 'Strong-hammertoned, steel frame, 300 d commercial grade polyester top, Pull pin height adjuster and slider bracket, straight legs with 30mm leg diameter, Includes: 300d roller bag and stake kit',
+                               tags: {gender: ['men'],
+                                      ageRange: ['21-40', '40+' ],
+                                      adjectives: ['sporty', 'funny'],
+                                     },
+                               rating: 3
                             });
     var keyboard = new Gift({name: '',
                                price: '',
@@ -332,7 +358,7 @@ Gift.remove({})
                                rating: 5
                             });
 
-  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear, usbCharger, koiTeapot, patioStove, keyboard, brainHeadband, toaster, smartouchTechGloves, dustbuster, bluetoothSpeaker, babyStroller, soundboardSystem, rollingBackpack, hockyPuck]);
+  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear, usbCharger, koiTeapot, patioStove, keyboard, brainHeadband, toaster, smartouchTechGloves, dustbuster, bluetoothSpeaker, babyStroller, soundboardSystem, rollingBackpack, hockeyPuck, wiecoArt, canopy]);
 
 })
 
