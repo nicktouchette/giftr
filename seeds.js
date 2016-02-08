@@ -124,14 +124,53 @@ Gift.remove({})
                                CloudPets heart blinks to indicate you have a message. Record and reply from your CloudPets. Parental controls are included; only invited family and friends can leave messages on your CloudPets recordable stuffed animal.
                                The CloudPets plush toy requires a compatible iOS or Android smartphone or tablet',
                                tags: {gender: ['women','men'],
-                                      ageRange: ['<18' ],
+                                      ageRange: ['<21' ],
                                       adjectives: ['nerdy', 'shy'],
                                      },
                                rating: 3
                             });
+  var usbCharger = new Gift({name: 'USB Charger by inStream',
+                               price: '<50',
+                               categories: ['electronics'],
+                               recipientType: ['friend', 'family'],
+                               link: 'http://www.amazon.com/USB-Charger-inStream-SeptimusB-Guaranteed/dp/B00SALFN6C/ref=sr_1_1?s=wireless&ie=UTF8&qid=1454958951&sr=1-1-spons&keywords=6+port+usb+charger&psc=1',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/61mAydMs9HL._SL1500_.jpg',
+                               description: 'SEVEN PORTS. NO COMPROMISE. Why settle for a 6 port or 5 port multi usb charger? Get 7 ports squeezed into an amazingly compact, high power multi usb charger. The SeptimusB measures only 4 x 1 x 3.5 inches so it can travel with you wherever you go.',
+                               tags: {gender: ['women','men'],
+                                      ageRange: ['<21' ],
+                                      adjectives: ['nerdy', 'funny', 'shy'],
+                                     },
+                               rating: 5
+                            });
+  var koiTeapot = new Gift({name: 'Old Dutch Koi Teapot',
+                               price: '<50',
+                               categories: ['home'],
+                               recipientType: ['friend', 'family'],
+                               link: 'http://www.amazon.com/Old-Dutch-Teapot-38-Ounce-Copper/dp/B00P8UEW1K/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1454959195&sr=1-1&keywords=koi+teapot',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/71F76JEjU9L._SL1500_.jpg',
+                               description: 'The heat-retaining properties of cast iron allow our tetsubin teapots to keep tea at the proper serving temperature for up to an hour
+                               The porcelain enamel interior keeps the taste of the tea pure and allow for easy cleaning',
+                               tags: {gender: ['women'],
+                                      ageRange: ['40+' ],
+                                      adjectives: ['sporty', 'shy'],
+                                     },
+                               rating: 4
+                            });
+  var patioStove = new Gift({name: 'Single Burner Patio Stove',
+                               price: '<50',
+                               categories: ['home'],
+                               recipientType: ['friend', 'family'],
+                               link: 'http://www.amazon.com/Bayou-Classic-Single-Burner-Patio/dp/B0009JXYQ4/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1454959440&sr=1-1&keywords=bayou+classic+single+burner+patio+stove',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/61e0uWQdvmL._SL1200_.jpg',
+                               description: '13 in. Tall Heavy Duty Steel Frame. Large 16 in. x 16 in. Cooking Surface. Accommodates any size Stockpot',
+                               tags: {gender: ['men'],
+                                      ageRange: ['21-40', '40+' ],
+                                      adjectives: ['sporty', 'funny'],
+                                     },
+                               rating: 2
+                            });
 
-
-  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear]);
+  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear, usbCharger, koiTeapot]);
 })
 
 
