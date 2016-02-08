@@ -1,7 +1,7 @@
 var giftController = function(Gift) {
 
   var index = function(req, res, next) {
-    res.send('INDEX');
+    res.send('Gift INDEX');
   };
 
   var create = function(req, res, next) {
