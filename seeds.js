@@ -344,6 +344,49 @@ Gift.remove({})
                                      },
                                rating: 3
                             });
+    var toiletSeat = new Gift({name: ''Trimmer Polyresin Toilet Seat,
+                               price: '<50',
+                               categories: ['home'],
+                               recipientType: ['family'],
+                               link: 'http://www.amazon.com/Trimmer-17A-08-Polyresin-Toilet-Seats/dp/B000NGMOX2/ref=sr_1_2?ie=UTF8&qid=1454970933&sr=8-2&keywords=trimmer+polyresin+toilet+seat',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/81t7mPwH-QL._SL1397_.jpg',
+                               description: 'Durable, Stain resistant, Easy to clean., Easy to install',
+                               tags: {gender: ['women'],
+                                      ageRange: ['21-40'],
+                                      adjectives: ['funny'],
+                                     },
+                               rating: 3
+                            });
+    var yardStash = new Gift({name: 'YardStash Outdoor Bike Storage',
+                               price: '50-200',
+                               categories: ['sports'],
+                               recipientType: ['friend', 'SO'],
+                               link: 'http://www.amazon.com/gp/product/B00IAD3FCY/ref=s9_al_bw_g469_i1',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/81bYbPhi9iL._SL1500_.jpg',
+                               description: 'Space saving size (74" wide x 30" deep x 65" high, fits two adult bicycles with room to spare) and water shedding design to easily stash two adult bikes, pool floats & supplies, kids toys, lawn mowers, long handled garden tools and other outdoor gear.',
+                               tags: {gender: ['men'],
+                                      ageRange: ['21-40', '40+' ],
+                                      adjectives: ['sporty', 'shy'],
+                                     },
+                               rating: 5
+                            });
+    var buddyBounce = new Gift({name: 'Outdoor Play Ball',
+                               price: '<50',
+                               categories: ['garden'],
+                               recipientType: ['friend'],
+                               link: 'http://www.amazon.com/Buddy-Bounce-Outdoor-Play-Inflatable/dp/B009E8LPDK/ref=sr_1_9?ie=UTF8&qid=1454971468&sr=8-9&keywords=teens+toys',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/61MvObRMn5L.jpg',
+                               description: 'Kids will have ball with the BBOP.
+                               To play, roll it around or climb inside and wear it.
+                               Offers endless hours of energetic play.
+                               Sold individually.
+                               Fits kids ages 6 and up.',
+                               tags: {gender: ['men', 'women'],
+                                      ageRange: ['<21'],
+                                      adjectives: ['sporty', 'funny'],
+                                     },
+                               rating: 2
+                            });
     var keyboard = new Gift({name: '',
                                price: '',
                                categories: [''],
@@ -358,7 +401,7 @@ Gift.remove({})
                                rating: 5
                             });
 
-  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear, usbCharger, koiTeapot, patioStove, keyboard, brainHeadband, toaster, smartouchTechGloves, dustbuster, bluetoothSpeaker, babyStroller, soundboardSystem, rollingBackpack, hockeyPuck, wiecoArt, canopy]);
+  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear, usbCharger, koiTeapot, patioStove, keyboard, brainHeadband, toaster, smartouchTechGloves, dustbuster, bluetoothSpeaker, babyStroller, soundboardSystem, rollingBackpack, hockeyPuck, wiecoArt, canopy, toiletSeat, yardStash, buddyBounce]);
 
 })
 
