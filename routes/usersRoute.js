@@ -16,7 +16,7 @@ var routes = function(User){
 
   router.route('/:id')
     .delete(userController.destroy)
-    .put(userController.update)
+    .patch(userController.update)
     .get(userController.show);
 
   return router;

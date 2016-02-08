@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  ul
+    - each user in users
+      li
+        div
+          h1= user.username
+          p= user.email
