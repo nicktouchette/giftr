@@ -1,12 +1,36 @@
 var giftController = function(Gift) {
 
   var index = function(req, res, next) {
-    res.send('Gift INDEX');
+    Gift.find({})
+      .then(function(gifts){
+        res.format({
+          json: function(){
+            res.json(gifts);
+          },
+          html: function(){
+            res.send('Gift INDEX');
+          }
+        });
+      }, function(err){
+        return next(err);
+      });
   };
 
   var create = function(req, res, next) {
     var gift = new Gift(req.body);
-      gift.save();
+    gift.save()
+    .then(function(gifts){
+        res.format({
+          json: function(){
+            res.json(gifts);
+          },
+          html: function(){
+            res.redirect('/gifts');
+          }
+        });
+      }, function(err){
+        return next(err);
+      });
   };
 
   var newForm = function(req, res, next) {
