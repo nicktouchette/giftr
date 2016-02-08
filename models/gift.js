@@ -7,7 +7,7 @@ var giftSchema = new mongoose.Schema({
     unique: true
   },
   price: {
-    type: Number,
+    type: String,
     required: true
   },
   categories: {
@@ -29,7 +29,7 @@ var giftSchema = new mongoose.Schema({
     type: String
   },
   tags: {
-    type: Array,
+    type: Object,
     required: true
   },
   rating: {
