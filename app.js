@@ -14,6 +14,7 @@ else {
 
 // Define Mongoose Schemas
 var User = require('./models/user');
+var Gift = require('./models/gift');
 
 var app = express();
 
@@ -32,10 +33,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Define routers and attach a mongoose Model
 var routes = require('./routes/index');
 var usersRouter = require('./routes/usersRoute')(User);
+var giftsRouter = require('./routes/giftsRoute')(Gift);
 
 // Define router paths
 app.use('/', routes);
 app.use('/users', usersRouter);
+app.use('/gifts', giftsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
