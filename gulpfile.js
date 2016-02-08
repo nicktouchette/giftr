@@ -26,7 +26,7 @@ gulp.task("compileSass", function() {
     includePaths: require('node-neat').includePaths
   }))
   .pipe(maps.write('./'))
-  .pipe(gulp.dest("public/stylesheets"))
+  .pipe(gulp.dest("./public/stylesheets"))
 });
 
 gulp.task('test', function() {

@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  include ./partials/header.jade
+
+  .container
+    h1 Find the perfect gift for...
+    p Welcome to #{title}
+
