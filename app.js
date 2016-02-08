@@ -31,12 +31,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routers and attach a mongoose Model
-var routes = require('./routes/index');
+var staticRouter = require('./routes/staticRoute')(User);
 var usersRouter = require('./routes/usersRoute')(User);
 var giftsRouter = require('./routes/giftsRoute')(Gift);
 
 // Define router paths
-app.use('/', routes);
+app.use('/', staticRouter);
 app.use('/users', usersRouter);
 app.use('/gifts', giftsRouter);
 
