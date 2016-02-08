@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var routes = require('./routes/index');
 var usersRouter = require('./routes/usersRoute')(User);
 
-// Define a router path
+// Define router paths
 app.use('/', routes);
 app.use('/users', usersRouter);
 

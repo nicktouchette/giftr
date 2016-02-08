@@ -25,7 +25,7 @@ gulp.task("compileSass", function() {
 
 gulp.task('test', function() {
   env({vars: {ENV:'Test'}});
-  gulp.src('tests/*.js', {read: false})
+  gulp.src('test/*.js', {read: false})
     .pipe(gulpMocha({reporter: 'nyan'}))
     .once('end', function () {
       process.exit();
