@@ -13,12 +13,14 @@ var gulp      = require('gulp'),
 
 // gulp.task("concatScripts", function() {
 //   gulp.src([])
+//   .pipe(maps.init())
 //   .pipe(concat("main.js"))
+//   .pipe(maps.write('./'))
 //   .pipe(gulp.dest("public/js"));
 // });
 
 gulp.task("compileSass", function() {
-  gulp.src("scss/style.scss")
+  return gulp.src("scss/style.scss")
   .pipe(maps.init())
   .pipe(sass({
     includePaths: require('node-neat').includePaths
@@ -36,6 +38,10 @@ gulp.task('test', function() {
     });
 });
 
-// gulp.task("default", ["hello"], function() {
-//   console.log("This is the default task");
-// });
+gulp.task('watchSass', function() {
+  gulp.watch(['scss/*.scss'], ['compileSass']);
+});
+
+gulp.task("build", ['compileSass', 'test']);
+
+gulp.task("default", ["build"]);
