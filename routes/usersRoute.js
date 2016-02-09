@@ -5,19 +5,19 @@ var routes = function(User){
   var userController = require('../controllers/userController')(User);
 
   router.route('/')
-    .post(authenticate, userController.create)
-    .get(authenticate, userController.index);
+    .post(authenticate, requireRole('admin'), userController.create)
+    .get(authenticate, requireRole('admin'), userController.index);
 
   router.route('/new')
-    .get(userController.newForm);
+    .get(authenticate, requireRole('admin'), userController.newForm);
 
   router.route('/:id/edit')
-    .get(userController.edit);
+    .get(authenticate, userController.edit);
 
   router.route('/:id')
-    .delete(userController.destroy)
-    .patch(userController.update)
-    .get(userController.show);
+    .delete(authenticate, userController.destroy)
+    .patch(authenticate, userController.update)
+    .get(authenticate, userController.show);
 
   return router;
 };

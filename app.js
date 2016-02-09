@@ -62,6 +62,17 @@ global.authenticate = function(req, res, next) {
   }
 };
 
+// Make role authorization global
+global.requireRole = function(role) {
+  return function(req, res, next) {
+    if (currentUser && currentUser.permission === role)
+      next();
+    else {
+      res.redirect('/');
+    }
+  };
+};
+
 // Define routers and attach a mongoose Model
 var staticRouter = require('./routes/staticRoute')(User);
 var usersRouter = require('./routes/usersRoute')(User);
