@@ -7,7 +7,8 @@ var express = require('express'),
     mongoose = require('mongoose'),
     passport = require('passport'),
     session = require('express-session'),
-    flash = require('connect-flash');
+    flash = require('connect-flash'),
+    methodOverride = require('method-override');
 
 var uristring =
   process.env.MONGOLAB_URI ||
@@ -39,6 +40,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'super secret key no one can hax', resave: true, saveUninitialized: false }));
 app.use(passport.initialize());

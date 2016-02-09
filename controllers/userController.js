@@ -74,6 +74,8 @@ var userController = function(User) {
   };
 
   var update = function(req, res, next) {
+    console.log(req.params.id);
+    console.log(req.body);
     User.findByIdAndUpdate(req.params.id, req.body)
     .then(function(query) {
       res.format({
@@ -81,7 +83,8 @@ var userController = function(User) {
           res.json(req.status);
         },
         html: function() {
-          res.redirect('/users/' + res.params.id);
+          console.log(query);
+          res.redirect('/users/' + req.params.id);
         }
       });
     }, function(err) {
