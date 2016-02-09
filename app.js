@@ -11,7 +11,6 @@ var express = require('express'),
 
 var uristring =
   process.env.MONGOLAB_URI ||
-  process.env.MONGOHQ_URL ||
   'mongodb://localhost/giftAPI';
 
 var theport = process.env.PORT || 5000;
