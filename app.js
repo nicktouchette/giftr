@@ -9,12 +9,20 @@ var express = require('express'),
     session = require('express-session'),
     flash = require('connect-flash');
 
-mongoose.connect('mongodb://localhost/giftAPI');
-// if(process.env.ENV == 'Test')
-//   var db = mongoose.connect('mongodb://localhost/giftAPI_test');
-// else {
-//   var db = mongoose.connect('mongodb://localhost/giftAPI');
-// }
+var uristring =
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/giftAPI';
+
+var theport = process.env.PORT || 5000;
+
+mongoose.connect(uristring, function (err, res) {
+  if (err) {
+    console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+    console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 
 // Define Mongoose Schemas
 var User = require('./models/user');
