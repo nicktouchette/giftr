@@ -28,7 +28,7 @@ function handleError(err) {
 
 var giftList = [{
   name: 'Tote Bag',
-  price: '<50',
+  price: 30,
   categories: ['accessories', 'luggage and travel gear'],
   recipientType: ['family', 'SO'],
   link: 'http://www.amazon.com/Hynes-Womens-Boutique-Handle-Handbag/dp/B00KRVAUG6/ref=sr_1_2?ie=UTF8&qid=1454949646&sr=8-2&keywords=hynes+tote+bag',
@@ -42,7 +42,7 @@ var giftList = [{
   rating: 3
 }, {
   name: 'Mini Basketball Hoop',
-  price: '<50',
+  price: 26,
   categories: ['sports'],
   recipientType: ['family', 'friend'],
   link: 'http://www.amazon.com/Spalding-Slam-Over---Door-Basketball/dp/B0085AOZIK/ref=sr_1_1?ie=UTF8&qid=1454951355&sr=8-1&keywords=spalding+mini+basketball+hoop',
@@ -56,7 +56,7 @@ var giftList = [{
   rating: 2
 }, {
   name: 'Bandolino Valerie Boot',
-  price: '50-200',
+  price: 109,
   categories: ['apparel'],
   recipientType: ['family', 'SO'],
   link: 'http://www.amazon.com/Bandolino-Womens-Valerie-Boot-Black/dp/B00VEYZ1X2/ref=sr_1_24?s=apparel&ie=UTF8&qid=1454955287&sr=1-24&nodeID=679380011&keywords=bandolino+boots',
@@ -70,7 +70,7 @@ var giftList = [{
   rating: 4
 }, {
   name: 'Turtle Beach Gaming Headset',
-  price: '50-200',
+  price: 90,
   categories: ['games'],
   recipientType: ['family', 'SO'],
   link: 'http://www.amazon.com/Turtle-Beach-Headphone-Playstation-4-3/dp/B00MNP9PD8/ref=sr_1_1?ie=UTF8&qid=1454956178&sr=8-1-spons&keywords=turtle+beach+ear+force&psc=1',
@@ -84,7 +84,7 @@ var giftList = [{
   rating: 5
 }, {
   name: 'Breville Barista Express Espresso Machine',
-  price: '200+',
+  price: 595,
   categories: ['food and drink'],
   recipientType: ['family', 'SO'],
   link: 'http://www.amazon.com/Breville-BES870XL-Barista-Express-Espresso/dp/B00CH9QWOU/ref=sr_1_5?s=kitchen&ie=UTF8&qid=1454957100&sr=1-5&keywords=espresso+machine',
@@ -98,7 +98,7 @@ var giftList = [{
   rating: 4
 }, {
   name: 'Line Sick Day 110 Skis',
-  price: '200+',
+  price: 499,
   categories: ['sports'],
   recipientType: ['SO'],
   link: 'http://www.amazon.com/Line-Sick-Day-110-Skis/dp/B00KXZ69N4/ref=sr_1_17?s=outdoor-recreation&ie=UTF8&qid=1454957762&sr=1-17&keywords=snow+skis',
@@ -112,7 +112,7 @@ var giftList = [{
   rating: 3
 }, {
   name: 'CloudPets Talking Teddy Bear',
-  price: '<50',
+  price: 20,
   categories: ['accessories'],
   recipientType: ['friend', 'family'],
   link: 'http://www.amazon.com/CloudPets-12in-Talking-Teddy-Bear/dp/B00YI1CHHG/ref=sr_1_1?s=toys-and-games&ie=UTF8&qid=1454957988&sr=1-1&keywords=talking+teddy+bear',
@@ -126,7 +126,7 @@ var giftList = [{
   rating: 3
 }, {
   name: 'USB Charger by inStream',
-  price: '<50',
+  price: 18,
   categories: ['electronics'],
   recipientType: ['friend', 'family'],
   link: 'http://www.amazon.com/USB-Charger-inStream-SeptimusB-Guaranteed/dp/B00SALFN6C/ref=sr_1_1?s=wireless&ie=UTF8&qid=1454958951&sr=1-1-spons&keywords=6+port+usb+charger&psc=1',
@@ -140,7 +140,7 @@ var giftList = [{
   rating: 5
 }, {
   name: 'Old Dutch Koi Teapot',
-  price: '<50',
+  price: 45,
   categories: ['home'],
   recipientType: ['friend', 'family'],
   link: 'http://www.amazon.com/Old-Dutch-Teapot-38-Ounce-Copper/dp/B00P8UEW1K/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1454959195&sr=1-1&keywords=koi+teapot',
@@ -154,7 +154,7 @@ var giftList = [{
   rating: 4
 }, {
   name: 'Single Burner Patio Stove',
-  price: '<50',
+  price: 50,
   categories: ['home'],
   recipientType: ['friend', 'family'],
   link: 'http://www.amazon.com/Bayou-Classic-Single-Burner-Patio/dp/B0009JXYQ4/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1454959440&sr=1-1&keywords=bayou+classic+single+burner+patio+stove',
@@ -168,7 +168,7 @@ var giftList = [{
   rating: 2
 }, {
   name: 'Midi Controller Keyboard',
-  price: '200+',
+  price: 270,
   categories: ['electronics'],
   recipientType: ['family', 'SO'],
   link: 'http://www.amazon.com/Novation-Impulse-49-Controller-Keyboard/dp/B005M02VNW/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1454963420&sr=8-1&keywords=novation+impulse+midi+keyboard',
@@ -182,7 +182,7 @@ var giftList = [{
   rating: 5
 }, {
   name: 'Brain Sensing Headband',
-  price: '200+',
+  price: 205,
   categories: ['electronics'],
   recipientType: ['family', 'SO'],
   link: 'http://www.amazon.com/Muse-Brain-Sensing-Headband-Black/dp/B00LOQR37C/ref=sr_1_1?ie=UTF8&qid=1454963858&sr=8-1&keywords=muse+headband',
@@ -196,7 +196,7 @@ var giftList = [{
   rating: 4
 }, {
   name: 'Retro Series 2-Slice Toaster',
-  price: '<50',
+  price: 29,
   categories: ['home'],
   recipientType: ['friend'],
   link: 'http://www.amazon.com/Nostalgia-RTOS200-Retro-2-Slice-Toaster/dp/B00ZTSHE6Q/ref=sr_1_2?ie=UTF8&qid=1454964199&sr=8-2&keywords=retro+series+toaster',
@@ -210,7 +210,7 @@ var giftList = [{
   rating: 4
 }, {
   name: 'Isotoner Smartouch Tech Gloves',
-  price: '<50',
+  price: 40,
   categories: ['apparel'],
   recipientType: ['friend', 'family', 'SO'],
   link: 'http://www.amazon.com/Isotoner-Smartouch-Stretch-Gloves-Black/dp/B008ATLQ9C/ref=sr_1_1?ie=UTF8&qid=1454964488&sr=8-1&keywords=isotoner+mens+gloves',
@@ -224,7 +224,7 @@ var giftList = [{
   rating: 2
 }, {
   name: 'Shark Cordless Handheld Vacuum',
-  price: '50-200',
+  price: 64,
   categories: ['home'],
   recipientType: ['friend', 'family'],
   link: 'http://www.amazon.com/Shark%C2%A0-Pet-Perfect-Hand-SV780/dp/B0037HHFMO/ref=sr_1_15?s=vacuums&ie=UTF8&qid=1454964874&sr=1-15&keywords=dustbuster',
@@ -238,7 +238,7 @@ var giftList = [{
   rating: 5
 }, {
   name: 'Anker Portable Stereo Bluetooth Speaker',
-  price: '50-200',
+  price: 56,
   categories: ['electronics'],
   recipientType: ['friend', 'family'],
   link: 'http://www.amazon.com/Anker-Portable-Bluetooth-Breakthrough-Dedicated/dp/B00RMYQU06',
@@ -252,7 +252,7 @@ var giftList = [{
   rating: 3
 }, {
   name: 'Baby Jogger Single Stroller',
-  price: '<200',
+  price: 280,
   categories: ['accessories'],
   recipientType: ['SO', 'family'],
   link: 'http://www.amazon.com/Baby-Jogger-Single-Stroller-Black/dp/B00G3XR8PS/ref=sr_1_1?ie=UTF8&qid=1454965577&sr=8-1&keywords=baby+jogger+city+mini+gt+single+stroller',
@@ -266,7 +266,7 @@ var giftList = [{
   rating: 4
 }, {
   name: 'Pioneer Andrew Jones Soundbar System',
-  price: '200+',
+  price: 300,
   categories: ['SO'],
   recipientType: ['sporty', 'funny'],
   link: 'http://www.amazon.com/Pioneer-SP-SB23W-Andrew-Soundbar-System/dp/B00EHBPF6W/ref=sr_1_1?ie=UTF8&qid=1454965962&sr=8-1&keywords=pioneer+andrew+jones+soundbar+system',
@@ -280,7 +280,7 @@ var giftList = [{
   rating: 5
 }, {
   name: 'Sunrise Rolling Backpack',
-  price: '<50',
+  price: 48,
   categories: ['luggage'],
   recipientType: ['friend', 'family'],
   link: 'http://www.amazon.com/World-New-York-Backpack-Raspberry/dp/B007MHKYJ6/ref=sr_1_1?ie=UTF8&qid=1454966313&sr=8-1&keywords=j+world+new+york+sunrise+rolling+backpack',
@@ -294,7 +294,7 @@ var giftList = [{
   rating: 3
 }, {
   name: 'Autographed St. Louis Blues Hockey Puck',
-  price: '50-200',
+  price: 60,
   categories: ['sports'],
   recipientType: ['friend'],
   link: 'http://www.amazon.com/Autographed-Brett-Louis-Blues-Hockey/dp/B00BL6ITMI/ref=sr_1_1?ie=UTF8&qid=1454967010&sr=8-1&keywords=st.+louis+blues+autographed+hockey+puck',

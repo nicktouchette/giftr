@@ -31,7 +31,7 @@ var staticController = function(User) {
 
   var signup = function(req, res, next) {
     var signUpStrategy = passport.authenticate('local-signup', {
-      successRedirect : '/users/' + currentUser.id,
+      successRedirect : '/gifts/',
       failureRedirect : '/signup',
       failureFlash : true
     });

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev-start": "nodemon ./bin/www",
+    "dev-start": "nodemon -e js,css,jade ./bin/www",
     "test": "gulp test"
   },
   "dependencies": {

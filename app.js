@@ -52,6 +52,16 @@ app.use(function (req, res, next) {
   next();
 });
 
+// Make authenticate global so it can be used wherever an authenticate is needed.
+global.authenticate = function(req, res, next) {
+  if(!req.isAuthenticated()) {
+    res.redirect('/');
+  }
+  else {
+    next();
+  }
+};
+
 // Define routers and attach a mongoose Model
 var staticRouter = require('./routes/staticRoute')(User);
 var usersRouter = require('./routes/usersRoute')(User);
@@ -64,7 +74,7 @@ app.use('/gifts', giftsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('Page Not Found');
   err.status = 404;
   next(err);
 });
@@ -89,7 +99,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
-    error: {}
+    error: { status: err.status }
   });
 });
 
