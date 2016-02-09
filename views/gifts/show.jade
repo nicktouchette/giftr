@@ -2,6 +2,7 @@ extends ../layout.jade
 
 block content
   h1 GIFT
-  <strong>gift name:</strong> #{gift.name}
-  h5= gift.id
+  h2 <strong>gift name: </strong>#{gift.name}
+    h3= gift.id
+  img( src= "#{gift.imageUrl}" )
 

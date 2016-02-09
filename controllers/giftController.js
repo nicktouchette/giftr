@@ -19,7 +19,7 @@ var giftController = function(Gift) {
   var create = function(req, res, next) {
     var gift = new Gift(req.body);
     gift.save()
-    .then(function(gifts){
+    .then(function(saved){
         res.format({
           json: function(){
             res.json(gifts);
@@ -44,7 +44,8 @@ var giftController = function(Gift) {
       description: '',
       tags: {},
       rating: null,
-    }
+    };
+    res.render('gifts/new', { gift: gift });
   };
 
   var edit = function(req, res, next) {
@@ -109,7 +110,6 @@ var giftController = function(Gift) {
     }, function(err) {
       return next(err);
     });
-    // res.send('GIFT SHOW');
   };
 
   return {
