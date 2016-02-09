@@ -8,7 +8,7 @@ var giftController = function(Gift) {
             res.json(gifts);
           },
           html: function(){
-            res.send('Gift INDEX');
+            res.render('gifts/index', { gifts: gifts });
           }
         });
       }, function(err){
@@ -34,23 +34,82 @@ var giftController = function(Gift) {
   };
 
   var newForm = function(req, res, next) {
-    res.send('NEW GIFT FORM');
+    var gift = {
+      name: '',
+      price: '',
+      categories: [],
+      recipientType: [],
+      link: '',
+      imageUrl: '',
+      description: '',
+      tags: {},
+      rating: null,
+    }
   };
 
   var edit = function(req, res, next) {
-    res.send('GIFT EDIT');
+    Gift.findById(req.params.id)
+    .then(function(gift) {
+      res.format({
+        json: function(){
+          res.json(gift);
+        },
+        html: function() {
+          res.render('gifts/edit', { gift: gift });
+        }
+      });
+    }, function(err) {
+      return next(err);
+    });
   };
 
   var destroy = function(req, res, next) {
-    res.send('GIFT DESTROY');
+    Gift.findByIdAndRemove(req.params.id)
+    .then(function(){
+      res.format({
+        json: function() {
+          res.json(req.status);
+        },
+        html: function() {
+          res.redirect('/gifts');
+        }
+      });
+    }, function(err) {
+      return next(err);
+    });
   };
 
   var update = function(req, res, next) {
-    res.send('GIFT UPDATE');
+    Gift.findByIdAndUpdate(req.params.id, req.body)
+    .then(function(query) {
+      res.format({
+        json: function() {
+          res.json(req.status);
+        },
+        html: function() {
+          res.redirect('/gifts/' + res.params.id);
+        }
+      });
+    }, function(err) {
+      return next(err);
+    });
   };
 
   var show = function(req, res, next) {
-    res.send('GIFT SHOW');
+    Gift.findById(req.params.id)
+    .then(function(gift) {
+      res.format({
+        json: function() {
+          res.json(gift);
+        },
+        html: function() {
+          res.render('gifts/show', { gift: gift });
+        }
+      });
+    }, function(err) {
+      return next(err);
+    });
+    // res.send('GIFT SHOW');
   };
 
   return {
