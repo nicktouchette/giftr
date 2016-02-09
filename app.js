@@ -4,7 +4,10 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    passport = require('passport'),
+    session = require('express-session'),
+    flash = require('connect-flash');
 
 if(process.env.ENV == 'Test')
   var db = mongoose.connect('mongodb://localhost/giftAPI_test');
@@ -29,6 +32,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'super secret key no one can hax', resave: true, saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+// configure passport
+require('./config/passport/passport')(passport);
+app.use(function (req, res, next) {
+  global.currentUser = req.user;
+  next();
+});
 
 // Define routers and attach a mongoose Model
 var staticRouter = require('./routes/staticRoute')(User);
