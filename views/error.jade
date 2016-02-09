@@ -1,6 +1,9 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
+  h1= error.status
+  h2= message
+  img( src= "http://www.vectorfree.com/media/cache/cb/7a/cb7a68253c0686053ce6712bae5be80f.jpg?=he71a27e022e3ad62df166f0d640b669e" )
+  h1 Ooops! The box is full of surprises, but the page you're looking for is not one of them.
+
   pre #{error.stack}
