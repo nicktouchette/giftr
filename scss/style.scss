@@ -24,11 +24,14 @@ body {
   @include shift(2);
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
+  background-color: black;
   margin-bottom: 20px;
   @include size(100% 40px);
   padding-left: 10px;
 }
+
+
 
 input[type=submit] {
   border: none;

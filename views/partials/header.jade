@@ -10,7 +10,7 @@ header.navigation(role='banner')
                 a(href='javascript:void(0)')= currentUser.local.email
                 ul.submenu
                   li
-                    a(href='#') Profile
+                    a(href='users/' + currentUser.id) Profile
                   li
                     a(href='/logout') Logout
             else

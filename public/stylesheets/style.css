@@ -2923,7 +2923,8 @@ body {
   .center:last-child {
     margin-right: 0; }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
+  background-color: black;
   margin-bottom: 20px;
   height: 40px;
   width: 100%;
