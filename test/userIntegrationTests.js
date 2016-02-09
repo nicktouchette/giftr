@@ -6,7 +6,7 @@ var should = require('should'),
     agent = request.agent(app);
 
 describe('User Crud Test', function() {
-  it('Should allow a user to be created and return an _id', function(done) {
+  it.skip('Should allow a user to be created and return an _id', function(done) {
     var userPost = {email:'test@test.com', username: 'test', permission:'user'};
 
     agent.post('/users')

@@ -9,11 +9,12 @@ var express = require('express'),
     session = require('express-session'),
     flash = require('connect-flash');
 
-if(process.env.ENV == 'Test')
-  var db = mongoose.connect('mongodb://localhost/giftAPI_test');
-else {
-  var db = mongoose.connect('mongodb://localhost/giftAPI');
-}
+mongoose.connect('mongodb://localhost/giftAPI');
+// if(process.env.ENV == 'Test')
+//   var db = mongoose.connect('mongodb://localhost/giftAPI_test');
+// else {
+//   var db = mongoose.connect('mongodb://localhost/giftAPI');
+// }
 
 // Define Mongoose Schemas
 var User = require('./models/user');
