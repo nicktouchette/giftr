@@ -169,8 +169,171 @@ Gift.remove({})
                                      },
                                rating: 2
                             });
+    var keyboard = new Gift({name: 'Midi Controller Keyboard',
+                               price: '200+',
+                               categories: ['electronics'],
+                               recipientType: ['family', 'SO'],
+                               link: 'http://www.amazon.com/Novation-Impulse-49-Controller-Keyboard/dp/B005M02VNW/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1454963420&sr=8-1&keywords=novation+impulse+midi+keyboard',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/51%2Bu9kmPKYL._SL1312_.jpg',
+                               description: 'Ultra-responsive semi weighted keyboard with aftertouch. Full DAW/plug-in control surface with 8 knobs, 9 faders and buttons.
+                               Automap 4 control software enables instant hands-on access to your DAW and plug-ins.
+                               Multi-function drum pads enable you to warp arpeggios, roll beats and launch clips in Ableton Live
+                               Comes with Ableton Live Lite, Novations Bass Station synth and a Loopmasters sample pack',
+                               tags: {gender: ['men'],
+                                      ageRange: ['21-40', '40+' ],
+                                      adjectives: ['sporty', 'nerdy'],
+                                     },
+                               rating: 5
+                            });
+    var brainHeadband = new Gift({name: 'Brain Sensing Headband',
+                               price: '200+',
+                               categories: ['electronics'],
+                               recipientType: ['family', 'SO'],
+                               link: 'http://www.amazon.com/Muse-Brain-Sensing-Headband-Black/dp/B00LOQR37C/ref=sr_1_1?ie=UTF8&qid=1454963858&sr=8-1&keywords=muse+headband',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/51wFa4ciIbL._SL1200_.jpg',
+                               description: 'muse is your personal meditation assistant..
+                               Sometimes your mind is calm and sometimes it is active. muse will guide you to a calm mind..
+                               Put on the muse headband, put on your earbuds, start the app, and close your eyes. Immerse yourself within the sounds of a beach or rainforest..
+                               While you meditate, muse measures whether your mind is calm or active, and translates that data into weathers sounds..
+                               When you are calm, you will hear peaceful weather sounds. When your mind wanders, the weather will intensify, guiding you back to a calm state..
+                               After each session, review your data, set goals, and build a deeply rewarding meditation practice that gets better every time.Kindly refer the user manual attached below for troubleshooting steps and instructions.',
+                               tags: {gender: ['men', 'women'],
+                                      ageRange: ['40+'],
+                                      adjectives: ['shy', 'nerdy'],
+                                     },
+                               rating: 4
+                            });
+    var toaster = new Gift({name: 'Retro Series 2-Slice Toaster',
+                               price: '<50',
+                               categories: ['home'],
+                               recipientType: ['friend'],
+                               link: 'http://www.amazon.com/Nostalgia-RTOS200-Retro-2-Slice-Toaster/dp/B00ZTSHE6Q/ref=sr_1_2?ie=UTF8&qid=1454964199&sr=8-2&keywords=retro+series+toaster',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/81c7eHl6aoL._SL1500_.jpg',
+                               description: 'Large slots for toasting bread, English muffins or bagel halves. Lighted control buttons with bagel, defrost, and cancel options.                               .
+                               5 browning control levels. Slide -out crumb tray',
+                               tags: {gender: ['women', 'men'],
+                                      ageRange: ['21-40'],
+                                      adjectives: ['shy', 'funny'],
+                                     },
+                               rating: 4
+                            });
+    var smartouchTechGloves = new Gift({name: 'Isotoner Smartouch Tech Gloves',
+                               price: '<50',
+                               categories: ['apparel'],
+                               recipientType: ['friend', 'family', 'SO'],
+                               link: 'http://www.amazon.com/Isotoner-Smartouch-Stretch-Gloves-Black/dp/B008ATLQ9C/ref=sr_1_1?ie=UTF8&qid=1454964488&sr=8-1&keywords=isotoner+mens+gloves',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/8172HzYJa4L._UX385_.jpg',
+                               description: 'Shell Back, Knit: 100% Polyester, Palm: 94% Polyester, 6% Lycra Spandex, Lining: 100% Polyester. Imported. Hand Wash.
+                               Gloves featuring elasticized cuffs and SmarTouch technology for touschreen compatibility.
+                               Non-slip palms for improved grip. Stretch material for flexibility',
+                               tags: {gender: ['men'],
+                                      ageRange: ['21-40', '40+' ],
+                                      adjectives: ['sporty', 'nerdy'],
+                                     },
+                               rating: 2
+                            });
+    var dustbuster = new Gift({name: 'Shark Cordless Handheld Vacuum',
+                               price: '50-200',
+                               categories: ['home'],
+                               recipientType: ['friend', 'family'],
+                               link: 'http://www.amazon.com/Shark%C2%A0-Pet-Perfect-Hand-SV780/dp/B0037HHFMO/ref=sr_1_15?s=vacuums&ie=UTF8&qid=1454964874&sr=1-15&keywords=dustbuster',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/61p4jpdo8EL._SL1500_.jpg',
+                               description: 'The most powerful 18 volt cordless hand vacuum available.
+                               Deep cleaning thanks to an extra-large detachable motorized brush for quick and easy cleanups of pet hair and ground-in dirt',
+                               tags: {gender: ['women'],
+                                      ageRange: ['40+'],
+                                      adjectives: ['nerdy', 'funny'],
+                                     },
+                               rating: 5
+                            });
+    var bluetoothSpeaker = new Gift({name: 'Anker Portable Stereo Bluetooth Speaker',
+                               price: '50-200',
+                               categories: ['electronics'],
+                               recipientType: ['friend', 'family'],
+                               link: 'http://www.amazon.com/Anker-Portable-Bluetooth-Breakthrough-Dedicated/dp/B00RMYQU06',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/61zJUq0YdFL._SL1000_.jpg',
+                               description: 'Stunning Stereo Sound: Experience your music in stunning stereo realized through dual five-watt drivers and dedicated bass port..
+                               Day-long Playtime: Breakthrough 24-hour / 500-song playtime powered by a built-in 6200 mAh Li-ion battery..
+                               Bluetooth 4.0: Instantly connect to your smartphone or tablet from up to 33 feet away. It remembers the last eight devices used, so reconnecting is automatic.',
+                               tags: {gender: ['men'],
+                                      ageRange: ['<21', '21-40' ],
+                                      adjectives: ['nerdy', 'funny'],
+                                     },
+                               rating: 3
+                            });
+    var babyStroller = new Gift({name: 'Baby Jogger Single Stroller',
+                               price: '<200',
+                               categories: ['accessories'],
+                               recipientType: ['SO', 'family'],
+                               link: 'http://www.amazon.com/Baby-Jogger-Single-Stroller-Black/dp/B00G3XR8PS/ref=sr_1_1?ie=UTF8&qid=1454965577&sr=8-1&keywords=baby+jogger+city+mini+gt+single+stroller',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/611rIfMbkmL._SY355_.jpg',
+                               description: 'Patented quick fold technology fold your stroller with one hand.
+                               85 inch all terrain non flat tires with front wheel suspension provide a smooth comfortable ride.
+                               Plush padded seat reclines to a near flat position with vented seat top.
+                               Large adjustable sun canopy with peek a boo windows.
+                               Adjustable handlebar suits users of all heights.
+                               85" all terrain non flat tires with front wheel suspension provide a smooth comfortable ride',
+                               tags: {gender: ['women'],
+                                      ageRange: ['21-40'],
+                                      adjectives: ['sporty', 'shy'],
+                                     },
+                               rating: 4
+                            });
+    var soundboardSystem = new Gift({name: 'Pioneer Andrew Jones Soundbar System',
+                               price: '200+',
+                               categories: ['SO'],
+                               recipientType: ['sporty', 'funny'],
+                               link: 'http://www.amazon.com/Pioneer-SP-SB23W-Andrew-Soundbar-System/dp/B00EHBPF6W/ref=sr_1_1?ie=UTF8&qid=1454965962&sr=8-1&keywords=pioneer+andrew+jones+soundbar+system',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/61wxOQ-os0L._SL1500_.jpg',
+                               description: 'Composite Wood Curved Cabinet, 4 - 3" Structured Surface Mid-Woofers, 2 - 1" Soft Dome Tweeters, 6 x 28 Watt Amplifiers, Bluetooth Music Streaming Built-in',
+                               tags: {gender: ['men'],
+                                      ageRange: ['40+'],
+                                      adjectives: ['funny', 'shy'],
+                                     },
+                               rating: 5
+                            });
+    var rollingBackpack = new Gift({name: 'Sunrise Rolling Backpack',
+                               price: '<50',
+                               categories: ['luggage'],
+                               recipientType: ['friend', 'family'],
+                               link: 'http://www.amazon.com/World-New-York-Backpack-Raspberry/dp/B007MHKYJ6/ref=sr_1_1?ie=UTF8&qid=1454966313&sr=8-1&keywords=j+world+new+york+sunrise+rolling+backpack',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/9129NhOV9ML._UX385_.jpg',
+                               description: '100% Polyester, Imported, 600,10" high, 14" wide, Recessed three stage locking handle with push button,Soft and noiseless wheels for stable and controlled motion',
+                               tags: {gender: ['women'],
+                                      ageRange: ['<21'],
+                                      adjectives: ['sporty', 'funny'],
+                                     },
+                               rating: 3
+                            });
+    var hockyPuck = new Gift({name: 'Autographed St. Louis Blues Hockey Puck',
+                               price: '50-200',
+                               categories: ['sports'],
+                               recipientType: ['friend'],
+                               link: 'http://www.amazon.com/Autographed-Brett-Louis-Blues-Hockey/dp/B00BL6ITMI/ref=sr_1_1?ie=UTF8&qid=1454967010&sr=8-1&keywords=st.+louis+blues+autographed+hockey+puck',
+                               imageUrl: 'http://ecx.images-amazon.com/images/I/51onp-RLJGL.jpg',
+                               description: '',
+                               tags: {gender: ['men'],
+                                      ageRange: ['40+'],
+                                      adjectives: ['sporty'],
+                                     },
+                               rating: 2
+                            });
+    var keyboard = new Gift({name: '',
+                               price: '',
+                               categories: [''],
+                               recipientType: ['', ''],
+                               link: '',
+                               imageUrl: '',
+                               description: '',
+                               tags: {gender: [''],
+                                      ageRange: ['', '' ],
+                                      adjectives: ['', ''],
+                                     },
+                               rating: 5
+                            });
 
-  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear, usbCharger, koiTeapot]);
+  return Gift.create([hynesToteBag, miniBasketballHoop, bandolinoValerieBoot, turtleBeachHeadset, espressoMachine, skis, teddyBear, usbCharger, koiTeapot, patioStove, keyboard, brainHeadband, toaster, smartouchTechGloves, dustbuster, bluetoothSpeaker, babyStroller, soundboardSystem, rollingBackpack, hockyPuck]);
+
 })
 
 

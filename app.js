@@ -4,16 +4,21 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    passport = require('passport'),
+    session = require('express-session'),
+    flash = require('connect-flash');
 
-if(process.env.ENV == 'Test')
-  var db = mongoose.connect('mongodb://localhost/giftAPI_test');
-else {
-  var db = mongoose.connect('mongodb://localhost/giftAPI');
-}
+mongoose.connect('mongodb://localhost/giftAPI');
+// if(process.env.ENV == 'Test')
+//   var db = mongoose.connect('mongodb://localhost/giftAPI_test');
+// else {
+//   var db = mongoose.connect('mongodb://localhost/giftAPI');
+// }
 
 // Define Mongoose Schemas
 var User = require('./models/user');
+var Gift = require('./models/gift');
 
 var app = express();
 
@@ -28,14 +33,27 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'super secret key no one can hax', resave: true, saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+// configure passport
+require('./config/passport/passport')(passport);
+app.use(function (req, res, next) {
+  global.currentUser = req.user;
+  next();
+});
 
 // Define routers and attach a mongoose Model
-var routes = require('./routes/index');
+var staticRouter = require('./routes/staticRoute')(User);
 var usersRouter = require('./routes/usersRoute')(User);
+var giftsRouter = require('./routes/giftsRoute')(Gift);
 
 // Define router paths
-app.use('/', routes);
+app.use('/', staticRouter);
 app.use('/users', usersRouter);
+app.use('/gifts', giftsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
