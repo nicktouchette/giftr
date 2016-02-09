@@ -5,8 +5,8 @@ var routes = function(User){
   var userController = require('../controllers/userController')(User);
 
   router.route('/')
-    .post(userController.create)
-    .get(userController.index);
+    .post(authenticate, userController.create)
+    .get(authenticate, userController.index);
 
   router.route('/new')
     .get(userController.newForm);

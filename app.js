@@ -52,6 +52,16 @@ app.use(function (req, res, next) {
   next();
 });
 
+// Make authenticate global so it can be used wherever an authenticate is needed.
+global.authenticate = function(req, res, next) {
+  if(!req.isAuthenticated()) {
+    res.redirect('/');
+  }
+  else {
+    next();
+  }
+};
+
 // Define routers and attach a mongoose Model
 var staticRouter = require('./routes/staticRoute')(User);
 var usersRouter = require('./routes/usersRoute')(User);
