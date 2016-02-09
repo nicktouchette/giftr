@@ -25,13 +25,19 @@ body {
 }
 
 input[type=text], input[type=password], input[type=email] {
-  background-color: black;
   margin-bottom: 20px;
   @include size(100% 40px);
   padding-left: 10px;
 }
 
+input[type=radio], input[type=checkbox] {
+  margin: 0 10px 0 15px;
+}
 
+input[type=number] {
+  height: 40px;
+  padding-left: 10px;
+}
 
 input[type=submit] {
   border: none;
@@ -49,6 +55,16 @@ label {
   &:hover {
     background-color: darken($primary, 15%);
   }
+}
+
+.option-btn {
+  @include btn;
+  padding: 5px 10px;
+  background-color: $dark-gray;
+}
+
+.inline {
+  display: inline-block;
 }
 
 // Home styles
@@ -99,6 +115,49 @@ label {
     text-align: center;
   }
 }
+
+// Profile
+
+h2.inline {
+  margin-right: 15px;
+}
+
+.img_row {
+
+  margin: 15px 0;
+  img {
+    margin-right: 15px;
+  }
+
+}
+
+// Find Gifts Page
+#gift_search {
+  .form_group {
+    margin: 10px 0 10px 0;
+  }
+  label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .max_price {
+    margin-left: 20px;
+  }
+  input[type=number] {
+    @include size(100px 30px);
+  }
+
+  .cats_checkboxes {
+
+    input[type=checkbox] {
+      display: block;
+    }
+
+  }
+
+}
+
 
 
 

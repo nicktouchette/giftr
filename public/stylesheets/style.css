@@ -2924,10 +2924,16 @@ body {
     margin-right: 0; }
 
 input[type=text], input[type=password], input[type=email] {
-  background-color: black;
   margin-bottom: 20px;
   height: 40px;
   width: 100%;
+  padding-left: 10px; }
+
+input[type=radio], input[type=checkbox] {
+  margin: 0 10px 0 15px; }
+
+input[type=number] {
+  height: 40px;
   padding-left: 10px; }
 
 input[type=submit] {
@@ -2949,6 +2955,20 @@ label {
   transition: background-color .4s; }
   .btn:hover {
     background-color: #186860; }
+
+.option-btn {
+  display: inline-block;
+  color: #EEE;
+  background-color: #31aa9f;
+  border-radius: 3px;
+  padding: 15px 18px;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #333; }
+
+.inline {
+  display: inline-block; }
 
 .tagline {
   float: none;
@@ -2987,5 +3007,30 @@ label {
     margin-right: 0; }
   .center_form h2 {
     text-align: center; }
+
+h2.inline {
+  margin-right: 15px; }
+
+.img_row {
+  margin: 15px 0; }
+  .img_row img {
+    margin-right: 15px; }
+
+#gift_search .form_group {
+  margin: 10px 0 10px 0; }
+
+#gift_search label {
+  font-size: 18px;
+  margin-right: 10px; }
+
+#gift_search .max_price {
+  margin-left: 20px; }
+
+#gift_search input[type=number] {
+  height: 30px;
+  width: 100px; }
+
+#gift_search .cats_checkboxes input[type=checkbox] {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 header.navigation(role='banner')
       .navigation-wrapper
         a.logo(href='../')
-          img(src='img/giftr_logo.png', alt='Logo Image')
+          img(src='/img/giftr_logo.png', alt='Logo Image')
         a#js-mobile-menu.navigation-menu-button(href='javascript:void(0)') MENU
         nav(role='navigation')
           ul#js-navigation-menu.navigation-menu.show
@@ -10,7 +10,7 @@ header.navigation(role='banner')
                 a(href='javascript:void(0)')= currentUser.local.email
                 ul.submenu
                   li
-                    a(href='users/' + currentUser.id) Profile
+                    a(href='/users/' + currentUser.id) Profile
                   li
                     a(href='/logout') Logout
             else

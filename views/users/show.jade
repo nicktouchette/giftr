@@ -1,0 +1,30 @@
+extends ../layout
+block content
+  h1.inline Your Profile
+  a(href= "/users/" + currentUser.id + "/edit", class="option-btn") Edit
+  br
+  img(src="http://placehold.it/100x100", class="profile_img")
+  p Email:
+    = ' ' + currentUser.local.email
+  p Username:
+  .img_row
+    h3 Favorite Gifts
+    - var n = 0
+      while n < 5
+        a
+          img(src="http://placehold.it/150x150")
+          - n++
+  .img_row
+    h3 Gifts You've Rated
+    - var n = 0
+      while n < 5
+        a
+          img(src="http://placehold.it/150x150")
+          - n++
+  .img_row
+    h3 Recently Viewed
+    - var n = 0
+      while n < 5
+        a
+          img(src="http://placehold.it/150x150")
+          - n++

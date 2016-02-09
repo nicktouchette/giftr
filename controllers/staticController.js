@@ -16,7 +16,7 @@ var staticController = function(User) {
 
   var login = function(req, res, next) {
     var loginProperty = passport.authenticate('local-login', {
-      successRedirect : '/users/' + currentUser.id,
+      successRedirect : '/gifts/',
       failureRedirect : '/login',
       failureFlash : true
     });
