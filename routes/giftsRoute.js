@@ -16,7 +16,7 @@ var routes = function(Gift){
 
   router.route('/:id')
     .delete(giftController.destroy)
-    .put(giftController.update)
+    .patch(giftController.update)
     .get(giftController.show);
 
   return router;
