@@ -2945,7 +2945,7 @@ label {
   padding: 15px 18px;
   text-decoration: none;
   margin-right: 10px;
-  transition: background-color .3s; }
+  transition: background-color .4s; }
   .btn:hover {
     background-color: #186860; }
 
@@ -2953,13 +2953,15 @@ label {
   float: none;
   font-size: 52px;
   font-weight: normal;
-  font-family: 'Courgette', cursive; }
+  font-family: 'Courgette', cursive;
+  text-align: center; }
 
 .events {
   position: relative;
   list-style: none;
   padding: 0;
-  height: 75px; }
+  height: 100px;
+  margin: 0 auto; }
   .events .emoji {
     font-size: 40px; }
     .events .emoji span {
@@ -2967,7 +2969,12 @@ label {
   .events li {
     position: absolute;
     top: 0;
-    opacity: 0; }
+    opacity: 0;
+    width: 100%;
+    text-align: center; }
+
+.signup_buttons {
+  text-align: center; }
 
 .center_form {
   float: left;

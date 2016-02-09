@@ -42,7 +42,7 @@ label {
 
 .btn {
   @include btn;
-  transition: background-color .3s;
+  transition: background-color .4s;
   &:hover {
     background-color: darken($primary, 15%);
   }
@@ -55,13 +55,15 @@ label {
   font-size: 52px;
   font-weight: normal;
   font-family: 'Courgette', cursive;
+  text-align: center;
 }
 
 .events {
   position: relative;
   list-style: none;
   padding: 0;
-  height: 75px;
+  height: 100px;
+  margin: 0 auto;
 
   .emoji {
     font-size: 40px;
@@ -75,8 +77,14 @@ label {
     position: absolute;
     top: 0;
     opacity: 0;
+    width: 100%;
+    text-align: center;
   }
 
+} // end to .events
+
+.signup_buttons {
+  text-align: center;
 }
 
 // Login and Signup Pages

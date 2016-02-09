@@ -1,7 +1,7 @@
 $(function() {
 
   // Show first event on home page
-  $('.events li').first().show();
+  $('.events li').first().css("opacity", 1);
 
   // Home page animation
   var $events = $('.events li');
@@ -11,7 +11,7 @@ $(function() {
   var $lastEvent = $events.last();
 
   function fadeUpInterval () {
-    var animateInterval = setInterval(fadeNext, 2000);
+    var animateInterval = setInterval(fadeNext, 3000);
   }
 
   function fadeNext() {
