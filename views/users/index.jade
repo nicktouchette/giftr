@@ -1,8 +1,7 @@
-extends ../layout
+extends ../layout.jade
 
 block content
   ul
-    - each user in users
+    -each user in users
       li
-        div
-          h1= user.local.email
+        h1= user.local.email

@@ -18,17 +18,33 @@ body {
   padding-bottom: 50px;
 }
 
+.center {
+  @include span-columns(8);
+  @include shift(2);
+}
+
+input[type=text], input[type=password] {
+  margin-bottom: 20px;
+  @include size(100% 40px);
+  padding-left: 10px;
+}
+
+input[type=submit] {
+  border: none;
+  outline: none;
+}
+
+label {
+  display: block;
+  padding-bottom: 10px;
+}
+
 .btn {
   @include btn;
 
   &:hover {
     background-color: darken($primary, 15%);
   }
-}
-
-.center {
-  margin: 0 auto;
-  text-align: center;
 }
 
 // Home styles
@@ -42,6 +58,7 @@ body {
 
 .events {
   list-style: none;
+  padding: 0;
 
   .emoji {
     font-size: 40px;
@@ -49,8 +66,22 @@ body {
     span {
       margin-right: 8px;
     }
-}
+  }
 
 }
+
+// Login and Signup Pages
+.center_form {
+  @include span-columns(4);
+  @include shift(4);
+
+  h2 {
+    text-align: center;
+  }
+}
+
+
+
+
 
 

@@ -548,6 +548,29 @@ body {
     content: "";
     display: table; }
 
+.center {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%; }
+  .center:last-child {
+    margin-right: 0; }
+
+input[type=text], input[type=password] {
+  margin-bottom: 20px;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px; }
+
+input[type=submit] {
+  border: none;
+  outline: none; }
+
+label {
+  display: block;
+  padding-bottom: 10px; }
+
 .btn {
   display: inline-block;
   color: #EEE;
@@ -559,10 +582,6 @@ body {
   .btn:hover {
     background-color: #186860; }
 
-.center {
-  margin: 0 auto;
-  text-align: center; }
-
 .tagline {
   float: none;
   font-size: 52px;
@@ -570,10 +589,22 @@ body {
   font-family: 'Courgette', cursive; }
 
 .events {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
   .events .emoji {
     font-size: 40px; }
     .events .emoji span {
       margin-right: 8px; }
+
+.center_form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-left: 34.11922%; }
+  .center_form:last-child {
+    margin-right: 0; }
+  .center_form h2 {
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
