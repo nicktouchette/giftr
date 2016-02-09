@@ -5,12 +5,52 @@
 @import '_layout';
 @import '_header';
 
+// Base styles
 body {
   background-color: $light-gray;
-  color: $dark-gray;
+  color: lighten($dark-gray, 10%);
   font-family: $helvetica;
 }
 
 .container {
   @include outer-container;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
+.btn {
+  @include btn;
+
+  &:hover {
+    background-color: darken($primary, 15%);
+  }
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+// Home styles
+
+.tagline {
+  float: none;
+  font-size: 52px;
+  font-weight: normal;
+  font-family: 'Courgette', cursive;
+}
+
+.events {
+  list-style: none;
+
+  .emoji {
+    font-size: 40px;
+
+    span {
+      margin-right: 8px;
+    }
+}
+
+}
+
+

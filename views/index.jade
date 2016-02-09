@@ -4,15 +4,13 @@ block content
   include ./partials/header.jade
 
   .container
-    h1 Find the perfect gift for...
-    p
-      span.emoji 💔 Valentine's Day
-    p
-      span.emoji 🎂 Birthday
-    p
-      span.emoji 🎄 Christmas
-    p
-      span.emoji 💍 Anniversary
-    p
-      span.emoji 🗓 Anyday
+    h1.tagline.center Find the perfect gift for...
+    ul.events.center
+      li.emoji <span>💔</span> Valentine's Day
+      li.emoji <span>🎂</span> Birthday
+      li.emoji <span>🎄</span> Christmas
+      li.emoji <span>💍</span> Anniversary
+      li.emoji <span>🗓</span> Anyday
+    a(class="btn center", href='/signup') Sign Up
+    a(class="btn center", href='/login') Log In
 

@@ -22,3 +22,13 @@ $navigation-active-link-color: transparentize(white, 0.5);
 $navigation-submenu-padding: 1em;
 $navigation-submenu-width: 12em;
 $horizontal-bar-mode: $large-screen;
+
+@mixin btn {
+  display: inline-block;
+  color: $light-gray;
+  background-color: tint($primary, 5%);
+  border-radius: $base-border-radius;
+  padding: 15px 18px;
+  text-decoration: none;
+  margin-right: 10px;
+}

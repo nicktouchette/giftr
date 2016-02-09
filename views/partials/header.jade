@@ -1,34 +1,20 @@
 header.navigation(role='banner')
       .navigation-wrapper
         a.logo(href='javascript:void(0)')
-          img(src='../../public/img/giftr_logo.png', alt='Logo Image')
+          img(src='img/giftr_logo.png', alt='Logo Image')
         a#js-mobile-menu.navigation-menu-button(href='javascript:void(0)') MENU
         nav(role='navigation')
           ul#js-navigation-menu.navigation-menu.show
-            li.nav-link
-              a(href='javascript:void(0)') Sign In
-            li.nav-link
-              a(href='javascript:void(0)') Log In
-            li.nav-link
-              a(href='javascript:void(0)') Contact
-            li.nav-link.more
-              a(href='javascript:void(0)') More
-              ul.submenu
-                li
-                  a(href='javascript:void(0)') Submenu Item
-                li
-                  a(href='javascript:void(0)') Another Item
-                li.more
-                  a(href='javascript:void(0)') Item with submenu
-                  ul.submenu
-                    li
-                      a(href='javascript:void(0)') Sub-submenu Item
-                    li
-                      a(href='javascript:void(0)') Another Item
-                li.more
-                  a(href='javascript:void(0)') Another submenu
-                  ul.submenu
-                    li
-                      a(href='javascript:void(0)') Sub-submenu
-                    li
-                      a(href='javascript:void(0)') An Item
+            if (currentUser)
+              li.nav-link.more
+                a(href='javascript:void(0)')= currentUser.local.email
+                ul.submenu
+                  li
+                    a(href='#') Profile
+                  li
+                    a(href='/logout') Logout
+            else
+              li.nav-link
+                a(href='/signup') Sign In
+              li.nav-link
+                a(href='/login') Log In
