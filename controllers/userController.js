@@ -74,15 +74,21 @@ var userController = function(User) {
   };
 
   var update = function(req, res, next) {
-    console.log(req.body);
-    User.findByIdAndUpdate(req.params.id, req.body)
+    var userUpdateVars = {
+      local: {
+        email: req.body.email,
+        password: req.body.password
+      },
+      permission: req.body.permission
+    };
+
+    User.findByIdAndUpdate(req.params.id, userUpdateVars)
     .then(function(query) {
       res.format({
         json: function() {
           res.json(req.status);
         },
         html: function() {
-          console.log(query);
           res.redirect('/users/' + req.params.id);
         }
       });
