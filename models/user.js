@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-var Gifts = require('gift');
+var Gifts = require('./gift');
 
 var userSchema = new mongoose.Schema({
   local: {
@@ -11,7 +11,7 @@ var userSchema = new mongoose.Schema({
     type: String,
     default: 'user'
   },
-  favorites: { type: Schema.ObjectId, ref: 'Gift' }
+  favorites: [{ type: mongoose.Schema.ObjectId, ref: 'Gift' }]
 });
 
 userSchema.methods.encrypt = function(password) {
