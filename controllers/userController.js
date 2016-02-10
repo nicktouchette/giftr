@@ -74,16 +74,15 @@ var userController = function(User) {
   };
 
   var update = function(req, res, next) {
-    var userUpdateVars = {
-      local: {
-        email: req.body.email,
-        password: req.body.password
-      },
-      permission: req.body.permission
-    };
+    var userUpdateVars = {};
+    if (req.body.email !== "") { userUpdateVars['local.email'] = req.body.email; }
+    if (req.body.password !== "") { userUpdateVars['local.password'] = req.body.password; }
+    if (req.body.permission !== "") { userUpdateVars.permission = req.body.permission; }
 
-    User.findByIdAndUpdate(req.params.id, userUpdateVars)
+    console.log(userUpdateVars);
+    User.findByIdAndUpdate(req.params.id, {$set: userUpdateVars})
     .then(function(query) {
+      console.log(query);
       res.format({
         json: function() {
           res.json(req.status);
