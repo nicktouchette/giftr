@@ -12,11 +12,11 @@ var routes = function(Gift){
     .get(giftController.newForm);
 
   router.route('/:id/edit')
-    .get(giftController.edit);
+    .get(requireRole('admin'), giftController.edit);
 
   router.route('/:id')
-    .delete(giftController.destroy)
-    .patch(giftController.update)
+    .delete(requireRole('admin'), giftController.destroy)
+    .patch(requireRole('admin'), giftController.update)
     .get(giftController.show);
 
   return router;

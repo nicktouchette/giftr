@@ -67,10 +67,22 @@ global.authenticate = function(req, res, next) {
 // Make role authorization global
 global.requireRole = function(role) {
   return function(req, res, next) {
-    if (currentUser && currentUser.permission === role)
-      next();
-    else {
-      res.redirect('/');
+    if (currentUser) {
+      if (role === 'admin' && currentUser.permission === 'admin') {
+        next();
+      } else if (role === 'owner' && currentUser.id === req.params.id) {
+        next();
+      } else if (role === currentUser.permission) {
+        next();
+      } else {
+        res.redirect('/');
+      }
+    } else {
+      if (role === 'anon') {
+        next();
+      } else {
+        res.redirect('/');
+      }
     }
   };
 };

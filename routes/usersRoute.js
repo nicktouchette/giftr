@@ -12,11 +12,11 @@ var routes = function(User){
     .get(authenticate, requireRole('admin'), userController.newForm);
 
   router.route('/:id/edit')
-    .get(authenticate, userController.edit);
+    .get(authenticate, requireRole('owner'), userController.edit);
 
   router.route('/:id')
-    .delete(authenticate, userController.destroy)
-    .patch(authenticate, userController.update)
+    .delete(authenticate, requireRole('owner'), userController.destroy)
+    .patch(authenticate, requireRole('owner'), userController.update)
     .get(authenticate, userController.show);
 
   return router;
