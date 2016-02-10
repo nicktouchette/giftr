@@ -67,6 +67,10 @@ label {
   display: inline-block;
 }
 
+.form_group {
+    margin: 10px 0 10px 0;
+}
+
 // Home styles
 
 .tagline {
@@ -131,11 +135,17 @@ h2.inline {
 
 }
 
+#profile_form {
+  @include span-columns(5);
+}
+
 // Find Gifts Page
 #gift_search {
-  .form_group {
-    margin: 10px 0 10px 0;
-  }
+  background-color: darken($light-gray, 10%);
+  padding: 15px 30px;
+  border-radius: 4px;
+  margin-bottom: 50px;
+
   label {
     font-size: 18px;
     margin-right: 10px;
@@ -148,15 +158,21 @@ h2.inline {
     @include size(100px 30px);
   }
 
-  .cats_checkboxes {
+  .cat_checkboxes {
+    @include outer-container;
 
     input[type=checkbox] {
-      display: block;
+      // display: block;
+    }
+
+    .check_column {
+      @include span-columns(3);
+      @include omega;
     }
 
   }
 
-}
+} // end of #gift_search
 
 
 

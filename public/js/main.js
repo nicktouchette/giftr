@@ -6,8 +6,8 @@ $(function() {
   // Home page animation
   var $events = $('.events li');
   var $currentEvent = $events.first();
-  var animationOut = 'fadeOutUp';
-  var animationIn = 'fadeInUp';
+  var animationOut = 'fadeOutLeft';
+  var animationIn = 'fadeInRight';
   var $lastEvent = $events.last();
 
   function fadeUpInterval () {

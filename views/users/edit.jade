@@ -1,28 +1,32 @@
 extends ../layout
 
 block content
+  #profile_form
+    h2 Edit Profile
+    form(method="post", action="/users/" + currentUser.id + "?_method=PATCH")
+          .form_group
+            label(for="username") Username
+            input(type="text", name="username", id="username", value=currentUser.local.userName)
 
-  form(method="post", action="/users/" + currentUser.id + "?_method=PATCH")
-        .form_group
-          label(for="username") Username
-          input(type="text", name="username", id="username", value=currentUser.local.userName)
+          .form_group
+            label(for="email") Email
+            input(type="email", name="email", id="email", value=currentUser.local.email)
 
-        .form_group
-          label(for="email") Email
-          input(type="email", name="email", id="email", value=currentUser.local.email)
+          .form_group
+            label(for="password") Password
+            input(type="password", name="password", id="password")
 
-        .form_group
-          label(for="password") Password
-          input(type="password", name="password", id="password")
-        .form_group
-          label(for="permission") Permission
-          - var permission = currentUser.permission
-          input(type="radio", name="permission", value="admin", checked= permission==="admin"? 'checked' : null)
-          | Admin
-          input(type="radio", name="permission", value="user", checked= permission==="user"? 'checked' : null)
-          | User
-        .form_group
-          input(type="submit", class="btn" value="Save")
+          .form_group
+            label(for="permission") Permission
+            - var permission = currentUser.permission
+            input(type="radio", name="permission", value="admin", checked= permission==="admin"? 'checked' : null)
+            | Admin
+            input(type="radio", name="permission", value="user", checked= permission==="user"? 'checked' : null)
+            | User
+
+          .form_group
+            input(type="submit", class="btn" value="Save")
+            a(href="/users/" + currentUser.id, class="btn") Back
 
 //- name
 //- email

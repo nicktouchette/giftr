@@ -2949,7 +2949,7 @@ label {
   color: #EEE;
   background-color: #31aa9f;
   border-radius: 3px;
-  padding: 15px 18px;
+  padding: 12px 18px;
   text-decoration: none;
   margin-right: 10px;
   transition: background-color .4s; }
@@ -2961,7 +2961,7 @@ label {
   color: #EEE;
   background-color: #31aa9f;
   border-radius: 3px;
-  padding: 15px 18px;
+  padding: 12px 18px;
   text-decoration: none;
   margin-right: 10px;
   padding: 5px 10px;
@@ -2969,6 +2969,9 @@ label {
 
 .inline {
   display: inline-block; }
+
+.form_group {
+  margin: 10px 0 10px 0; }
 
 .tagline {
   float: none;
@@ -3016,21 +3019,42 @@ h2.inline {
   .img_row img {
     margin-right: 15px; }
 
-#gift_search .form_group {
-  margin: 10px 0 10px 0; }
+#profile_form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%; }
+  #profile_form:last-child {
+    margin-right: 0; }
 
-#gift_search label {
-  font-size: 18px;
-  margin-right: 10px; }
-
-#gift_search .max_price {
-  margin-left: 20px; }
-
-#gift_search input[type=number] {
-  height: 30px;
-  width: 100px; }
-
-#gift_search .cats_checkboxes input[type=checkbox] {
-  display: block; }
+#gift_search {
+  background-color: #d5d5d5;
+  padding: 15px 30px;
+  border-radius: 4px;
+  margin-bottom: 50px; }
+  #gift_search label {
+    font-size: 18px;
+    margin-right: 10px; }
+  #gift_search .max_price {
+    margin-left: 20px; }
+  #gift_search input[type=number] {
+    height: 30px;
+    width: 100px; }
+  #gift_search .cat_checkboxes {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    #gift_search .cat_checkboxes::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #gift_search .cat_checkboxes .check_column {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      margin-right: 0; }
+      #gift_search .cat_checkboxes .check_column:last-child {
+        margin-right: 0; }
 
 /*# sourceMappingURL=style.css.map */

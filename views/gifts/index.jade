@@ -26,49 +26,51 @@ block content
         label(for="maxPrice", class="inline max_price") Max Price:
         input(type="number", name="maxPrice", id="maxPrice")
       .form_group
-        label(for="tags", class="cat_checkboxes") Tags
+        label(for="tags", class="cat_checkboxes") Tags:
           br
-          .checkbox
-            label
-              input(type="checkbox", value="accessories")
-              | Accessories
-          .checkbox
-            label
-              input(type="checkbox", value="luggage and travel gear")
-              | Travel Gear
-          .checkbox
-            label
-              input(type="checkbox", value="sports")
-              | Sports
-          .checkbox
-            label
-              input(type="checkbox", value="home")
-              | Home
-          .checkbox
-            label
-              input(type="checkbox", value="garder")
-              | Garden
-          .checkbox
-            label
-              input(type="checkbox", value="games")
-              | Games
-          .checkbox
-            label
-              input(type="checkbox", value="food and drink")
-              | Food and Drink
-          .checkbox
-            label
-              input(type="checkbox", value="electronics")
-              | Electronics
+          .check_column
+            .checkbox
+              label
+                input(type="checkbox", value="accessories", name="accessories")
+                | Accessories
+            .checkbox
+              label
+                input(type="checkbox", value="electronics")
+                | Electronics
+            .checkbox
+              label
+                input(type="checkbox", value="food and drink")
+                | Food and Drink
+            .checkbox
+              label
+                input(type="checkbox", value="games")
+                | Games
+          .check_column
+            .checkbox
+              label
+                input(type="checkbox", value="garder")
+                | Garden
+            .checkbox
+              label
+                input(type="checkbox", value="home")
+                | Home
+            .checkbox
+              label
+                input(type="checkbox", value="luggage and travel gear")
+                | Travel Gear
+            .checkbox
+              label
+                input(type="checkbox", value="sports")
+                | Sports
       //- Change to checkboxes
       input(type="submit", value="Find Gift", class="btn")
       br
-    .img_row
-      - var n = 0
-        while n < 5
-          a
-            img(src="http://placehold.it/202x200")
-            - n++
+  .img_row
+    - var n = 0
+      while n < 5
+        a
+          img(src="http://placehold.it/202x200")
+          - n++
   //- ul
   //-   -each gift in gifts
   //-     li
