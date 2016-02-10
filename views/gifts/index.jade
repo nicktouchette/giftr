@@ -1,8 +1,16 @@
+mixin gift(img, name, price, id)
+  .gift.inline
+    a(href="/gifts/" + id)
+      img(src= img)
+    p= name
+    p= price
+
+
 extends ../layout.jade
 
 block content
   section#gift_search
-    form(method="get", action="/")
+    form(method="get", action="/gifts/", id="search")
       .form_group
         label(for="recipientType", class="inline") Relationship:
         input(type="radio", value="Friend", name="recipientType")
@@ -13,64 +21,61 @@ block content
         | Lover
       .form_group
         label(for="Gender", class="inline") Gender:
-        input(type="radio", value="Men", name="gender")
+        input(type="radio", value="men", name="gender")
         | Male
-        input(type="radio", value="Women", name="gender")
+        input(type="radio", value="women", name="gender")
         | Female
       .form_group
         label(for="age", class="inline") Age:
-        input(type="number", name="age", id="age")
+        input(type="number", name="age", id="age", value="0", max="100")
       .form_group
         label(for="minPrice", class="inline") Min. Price:
-        input(type="number", name="minPrice", id="minPrice")
+        input(type="number", name="minPrice", id="minPrice", value="0", min="0", max="1000000")
         label(for="maxPrice", class="inline max_price") Max Price:
-        input(type="number", name="maxPrice", id="maxPrice")
+        input(type="number", name="maxPrice", id="maxPrice", value="0", min="0", max="1000000")
       .form_group
         label(for="tags", class="cat_checkboxes") Tags:
           br
           .check_column
             .checkbox
               label
-                input(type="checkbox", value="accessories", name="accessories")
+                input(type="checkbox", value="accessories", name="categories")
                 | Accessories
             .checkbox
               label
-                input(type="checkbox", value="electronics")
+                input(type="checkbox", value="electronics", name="categories")
                 | Electronics
             .checkbox
               label
-                input(type="checkbox", value="food and drink")
+                input(type="checkbox", value="food and drink", name="categories")
                 | Food and Drink
             .checkbox
               label
-                input(type="checkbox", value="games")
+                input(type="checkbox", value="games", name="categories")
                 | Games
           .check_column
             .checkbox
               label
-                input(type="checkbox", value="garder")
+                input(type="checkbox", value="garden", name="categories")
                 | Garden
             .checkbox
               label
-                input(type="checkbox", value="home")
+                input(type="checkbox", value="home", name="categories")
                 | Home
             .checkbox
               label
-                input(type="checkbox", value="luggage and travel gear")
+                input(type="checkbox", value="luggage and travel gear", name="categories")
                 | Travel Gear
             .checkbox
               label
-                input(type="checkbox", value="sports")
+                input(type="checkbox", value="sports", name="categories")
                 | Sports
       //- Change to checkboxes
       input(type="submit", value="Find Gift", class="btn")
       br
   .img_row
-    - var n = 0
-      while n < 5
-        a
-          img(src="http://placehold.it/202x200")
-          - n++
+    #gifts_container
+
   //- ul
   //-   -each gift in gifts
   //-     li

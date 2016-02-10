@@ -36,7 +36,7 @@ var giftController = function(Gift) {
   var newForm = function(req, res, next) {
     var gift = {
       name: '',
-      price: '',
+      price: null,
       categories: [],
       recipientType: [],
       link: '',
@@ -111,6 +111,8 @@ var giftController = function(Gift) {
       return next(err);
     });
   };
+
+
 
   return {
     index: index,

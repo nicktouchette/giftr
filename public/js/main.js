@@ -1,5 +1,5 @@
 $(function() {
-
+  // Home page animation
   // Show first event on home page
   $('.events li').first().css("opacity", 1);
 
@@ -34,7 +34,57 @@ $(function() {
 
   fadeUpInterval();
 
-  for(var i = 0; i < $events.length; i++) {
-      // $($events[i]).delay(1).show('slow');
-    }
+  // Search Gifts
+
+  function searchGifts (event) {
+    event.preventDefault();
+
+    var str = $("#search").find('input').not('[value=undefined]').serialize();
+    console.log(str);
+    var url = 'http://localhost:3000/gifts?' + str;
+    alert(url);
+    // var gender = $('input[name=gender]:checked', '#search').val();
+    // var maxPrice = $('input[name=maxPrice]', '#search').val();
+    // var minPrice = $('input[name=minPrice]', '#search').val();
+    // var recipientType = $('input[name=recipientType]:checked', '#search').val();
+    // var categories = $('input[name="categories"]:checked', '#search').serialize();
+    // console.log(categories);
+    $.ajax({
+      url: url,
+      method: "GET"
+
+    }).done(function(data) {
+      displayResults(data);
+      // console.log(results);
+    });
+  }
+
+  function displayResults(results) {
+    var $container = $("#gifts_container");
+    // console.log(results);
+    $container.empty();
+
+    results.forEach(function(result) {
+      var id = result._id;
+      var imgUrl = result.imageUrl;
+      var gift = $("<div class='gift inline'></div>");
+      var link = $("<a href='http://localhost:3000/gifts/" + id  + "'></a>");
+      var img = "<img src='" + imgUrl + "'>";
+      var name = "<p>" + result.name + "</p>";
+      var price = $("<p>$" + result.price + "</p>");
+
+      $(gift).append(link);
+      $(gift).append(name);
+      $(gift).append(price);
+
+      $(link).append(img);
+
+      console.log(result);
+      $container.append(gift);
+
+    })
+  }
+
+
+  $('form#search').submit(searchGifts);
 });
