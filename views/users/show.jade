@@ -1,7 +1,7 @@
 extends ../layout
 block content
   h1.inline Your Profile
-  - if (user.id === currentUser.id)
+  - if (user.id === currentUser.id || requireRole('admin'))
     a(href= "/users/" + user.id + "/edit", class="option-btn") Edit
   br
   img(src="http://placehold.it/100x100", class="profile_img")

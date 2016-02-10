@@ -74,7 +74,6 @@ var userController = function(User) {
   };
 
   var update = function(req, res, next) {
-    console.log(req.params.id);
     console.log(req.body);
     User.findByIdAndUpdate(req.params.id, req.body)
     .then(function(query) {

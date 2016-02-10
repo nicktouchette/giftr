@@ -68,7 +68,7 @@ global.authenticate = function(req, res, next) {
 global.requireRole = function(role) {
   return function(req, res, next) {
     if (currentUser) {
-      if (role === 'admin' && currentUser.permission === 'admin') {
+      if (currentUser.permission === 'admin') {
         next();
       } else if (role === 'owner' && currentUser.id === req.params.id) {
         next();
