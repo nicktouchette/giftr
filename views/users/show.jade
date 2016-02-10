@@ -1,8 +1,10 @@
 extends ../layout
 block content
   h1.inline Your Profile
-  - if (user.id === currentUser.id || requireRole('admin'))
-    a(href= "/users/" + user.id + "/edit", class="option-btn") Edit
+  - if (user.id === currentUser.id || currentUser.permission === 'admin')
+    - console.log(user.id === currentUser.id)
+    - console.log(currentUser.permission)
+      a(href= "/users/" + user.id + "/edit", class="option-btn") Edit
   br
   img(src="http://placehold.it/100x100", class="profile_img")
   p Email:
