@@ -1,7 +1,19 @@
 var giftController = function(Gift) {
 
   var index = function(req, res, next) {
-    Gift.find({})
+    var query = {
+      recipientType: req.query.recipientType,
+      'tags.gender': req.query.gender
+    };
+
+    for (var i in query) {
+      if (query[i] === null || query[i] === undefined) {
+        delete query[i];
+      }
+    }
+
+    console.log(query);
+    Gift.find(query)
       .then(function(gifts){
         res.format({
           json: function(){
@@ -14,6 +26,10 @@ var giftController = function(Gift) {
       }, function(err){
         return next(err);
       });
+  };
+
+  var bogus = function(req, res, next) {
+    res.send("test");
   };
 
   var create = function(req, res, next) {
