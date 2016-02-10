@@ -3072,11 +3072,12 @@ h2.inline {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%; }
+    width: 23.23176%;
+    margin-right: 0; }
     #gifts_container .gift:last-child {
       margin-right: 0; }
     #gifts_container .gift a img {
-      height: 200px;
-      width: 202px; }
+      width: 300px;
+      height: 250px; }
 
 /*# sourceMappingURL=style.css.map */
