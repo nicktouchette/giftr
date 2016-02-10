@@ -3,14 +3,14 @@ extends ../layout
 block content
   #profile_form
     h2 Edit Profile
-    form(method="post", action="/users/" + currentUser.id + "?_method=PATCH")
+    form(method="post", action="/users/" + user.id + "?_method=PATCH")
           .form_group
             label(for="username") Username
-            input(type="text", name="username", id="username", value=currentUser.local.userName)
+            input(type="text", name="username", id="username", value=user.local.userName)
 
           .form_group
             label(for="email") Email
-            input(type="email", name="email", id="email", value=currentUser.local.email)
+            input(type="email", name="email", id="email", value=user.local.email)
 
           .form_group
             label(for="password") Password
@@ -18,7 +18,7 @@ block content
 
           .form_group
             label(for="permission") Permission
-            - var permission = currentUser.permission
+            - var permission = user.permission
             input(type="radio", name="permission", value="admin", checked= permission==="admin"? 'checked' : null)
             | Admin
             input(type="radio", name="permission", value="user", checked= permission==="user"? 'checked' : null)
@@ -26,7 +26,7 @@ block content
 
           .form_group
             input(type="submit", class="btn" value="Save")
-            a(href="/users/" + currentUser.id, class="btn") Back
+            a(href="/users/" + user.id, class="btn") Back
 
 //- name
 //- email

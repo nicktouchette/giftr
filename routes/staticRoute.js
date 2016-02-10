@@ -8,15 +8,15 @@ var routes = function(User){
     .get(staticController.index);
 
   router.route('/login')
-    .get(staticController.loginForm)
-    .post(staticController.login);
+    .get(requireRole('anon'), staticController.loginForm)
+    .post(requireRole('anon'), staticController.login);
 
   router.route('/logout')
-    .get(staticController.logout);
+    .get(authenticate, staticController.logout);
 
   router.route('/signup')
-    .get(staticController.signupForm)
-    .post(staticController.signup);
+    .get(requireRole('anon'), staticController.signupForm)
+    .post(requireRole('anon'), staticController.signup);
 
   return router;
 };
