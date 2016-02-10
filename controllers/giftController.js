@@ -1,9 +1,16 @@
 var giftController = function(Gift) {
 
   var index = function(req, res, next) {
+    console.log(req.query.categories);
+
+    if (req.query.categories) {
+      var category = {$in: Array.isArray(req.query.categories)?req.query.categories:[req.query.categories]};
+    }
+
     var query = {
       recipientType: req.query.recipientType,
-      'tags.gender': req.query.gender
+      'tags.gender': req.query.gender,
+      categories: category
     };
 
     for (var i in query) {
