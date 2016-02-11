@@ -235,7 +235,7 @@ h2.inline {
         transition: background-color .4s;
 
         &:hover {
-          background-color: darken($light-gray, 50%);
+          background-color: darken($light-gray, 65%);
         }
       }
     } // end .gift
