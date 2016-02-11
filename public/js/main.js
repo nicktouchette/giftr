@@ -10,6 +10,9 @@ $(function() {
   var animationIn = 'fadeInRight';
   var $lastEvent = $events.last();
 
+  var host = window.location.protocol + '//' + window.location.host + '/gifts';
+  var url = host + '?';
+
   function fadeUpInterval () {
     var animateInterval = setInterval(fadeNext, 3000);
   }
@@ -41,7 +44,6 @@ $(function() {
 
     var str = $("#search").find('input').not('[value=undefined]').serialize();
     console.log(str);
-    var url = 'http://localhost:3000/gifts?' + str;
 
     // var gender = $('input[name=gender]:checked', '#search').val();
     // var maxPrice = $('input[name=maxPrice]', '#search').val();
@@ -50,7 +52,7 @@ $(function() {
     // var categories = $('input[name="categories"]:checked', '#search').serialize();
     // console.log(categories);
     $.ajax({
-      url: url,
+      url: url + str,
       method: "GET"
 
     }).done(function(data) {
@@ -69,7 +71,7 @@ $(function() {
       var imgUrl = result.imageUrl;
       var gift = $("<div class='gift animated bounceInRight'></div>");
       var giftInfo = $("<div class='gift_info'></div>");
-      var link = $("<a href='http://localhost:3000/gifts/" + id  + "'></a>");
+      var link = $("<a href='" + host + "/" + id  + "'></a>");
       var img = "<img src='" + imgUrl + "'>";
       var name = "<p class='gift_name'>" + result.name + " " + result.tags.ageRange + "</p>";
       var price = $("<p class='gift_price'>$" + result.price + ".00</p>");
