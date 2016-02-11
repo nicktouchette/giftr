@@ -66,7 +66,7 @@ $(function() {
     results.forEach(function(result) {
       var id = result._id;
       var imgUrl = result.imageUrl;
-      var gift = $("<div class='gift'></div>");
+      var gift = $("<div class='gift animated bounceInRight'></div>");
       var giftInfo = $("<div class='gift_info'></div>");
       var link = $("<a href='http://localhost:3000/gifts/" + id  + "'></a>");
       var img = "<img src='" + imgUrl + "'>";

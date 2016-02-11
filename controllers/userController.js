@@ -97,14 +97,14 @@ var userController = function(User) {
   };
 
   var show = function(req, res, next) {
-    User.findById(req.params.id)
+    User.findById(req.params.id).populate('favorites')
     .then(function(user) {
       res.format({
         json: function() {
           res.json(user);
         },
         html: function() {
-          res.render('users/show', { user: user });
+          res.render('users/show', { user: user, favorites: user.favorites });
         }
       });
     }, function(err) {
