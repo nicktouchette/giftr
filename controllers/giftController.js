@@ -9,11 +9,23 @@ var giftController = function(Gift) {
       var price = {$lte: req.query.maxPrice, $gte: req.query.minPrice};
     }
 
+    if (req.query.age) {
+      var ageMin = {$gte: req.query.age};
+      var ageMax = {$lte: req.query.age};
+      // var ageMin = {$lte: req.query.age};
+      // var ageMax = {$gte: req.query.age};
+      console.log(ageMin);
+      console.log(ageMax);
+    }
+
     var query = {
       recipientType: req.query.recipientType,
       'tags.gender': req.query.gender,
       price: price,
-      categories: category
+      'tags.ageRange.0': ageMin,
+      'tags.ageRange.1': ageMax,
+      categories: category,
+
     };
 
     for (var i in query) {
