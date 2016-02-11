@@ -36,7 +36,7 @@ var giftList = [{
   description: 'Material: synthetic leather with fabric lining Closure Type: zipper.Size: 15.7 * 5.5 * 11.8(L * W * H inches) Interior: 1 main pocket + 1 interior zippered pockets + 2 slip pockets Top carry handle with Detachable shoulder strap. Large capacity enough for necessary stuffs such as ipad / phones / documents etc.',
   tags: {
     gender: ['women', 'men'],
-    ageRange: ['<21', '21-40', '40+'],
+    ageRange: [0,100],
     adjectives: ['sporty', 'nerdy', 'funny', 'shy'],
   },
   rating: 3
@@ -50,7 +50,7 @@ var giftList = [{
   description: '1/4" scale of NBA game backboard, 18" x 10.5" Polycarbonate Backboard, Slam Jam Breakaway Rim Design, Easily mounts with a pre-assembled bracket and over the Door Foam Padded Bracket, 4 " Rubber Basketball Included along with tool for easy assembly',
   tags: {
     gender: ['men'],
-    ageRange: ['<21'],
+    ageRange: [0,21],
     adjectives: ['sporty'],
   },
   rating: 2
@@ -64,7 +64,7 @@ var giftList = [{
   description: 'Leather, Imported. Manmade sole. Leather boot with square toe and buckled strap at ankle. Stacked heel.',
   tags: {
     gender: ['women'],
-    ageRange: ['21-40'],
+    ageRange: [21,40],
     adjectives: ['sporty', 'funny'],
   },
   rating: 4
@@ -78,7 +78,7 @@ var giftList = [{
   description: '7.1 Surround Sound - DTS Headphone:X delivers an amazing, 3D 360-degree sound stage with unmatched spatial accuracy. Custom DTS Surround Sound modes, each with four EQ Presets, further immerse you in your favorite games, movies, and music. Separate Volume Controls - Set your mix of PS4 or PS3 game and chat volume levels right on the headset Long - Life Rechargeable Battery - Built - in rechargeable battery that delivers over 15 hours of wireless gaming Stop SHOUTING!-Turtle Beach Mic Monitoring lets you hear your own voice in the headset to avoid shouting Never Miss a Text or Call - Connect your mobile phone to hear text message notifications or take calls while gaming via the included mobile cable ',
   tags: {
     gender: ['men'],
-    ageRange: ['<21', '21-40'],
+    ageRange: [0,40],
     adjectives: ['sporty', 'nerdy'],
   },
   rating: 5
@@ -92,7 +92,7 @@ var giftList = [{
   description: '15 Bar Italian Pump and 1600W Thermo coil heating system Purge Function: Automatically adjusts water temperature after steam for optimal espresso extraction temperature Stainless steel conical burr grinder with 1 / 2 lb.sealed bean hopper 67 fl.oz(2 L) removable water tank with handle Newer model of the Breville BES860XL Barista Express ',
   tags: {
     gender: ['women', 'men'],
-    ageRange: ['21-40', '40+'],
+    ageRange: [21,100],
     adjectives: ['sporty', 'shy'],
   },
   rating: 4
@@ -106,7 +106,7 @@ var giftList = [{
   description: '5 Cut Sidecut, Early Taper, Early Rise Tip, Thin Tip, 4014g/Pair',
   tags: {
     gender: ['women', 'men'],
-    ageRange: ['21-40', '40+'],
+    ageRange: [21,100],
     adjectives: ['sporty'],
   },
   rating: 3
@@ -120,7 +120,7 @@ var giftList = [{
   description: 'A message you can hug. Send a message to the CloudPets talking teddy bear from anyone from anywhere. Stay in touch with the ones you love!CloudPets makes you feel like the ones you love are always near. Send and receive messages from anywhere through the cloud with free app.The CloudPets app uses bluetooth technology to send your messages to your pet. CloudPets heart blinks to indicate you have a message.Record and reply from your CloudPets.Parental controls are included;only invited family and friends can leave messages on your CloudPets recordable stuffed animal. The CloudPets plush toy requires a compatible iOS or Android smartphone or tablet ',
   tags: {
     gender: ['women', 'men'],
-    ageRange: ['<21'],
+    ageRange: [0,21],
     adjectives: ['nerdy', 'shy'],
   },
   rating: 3
@@ -134,7 +134,7 @@ var giftList = [{
   description: 'SEVEN PORTS. NO COMPROMISE. Why settle for a 6 port or 5 port multi usb charger? Get 7 ports squeezed into an amazingly compact, high power multi usb charger. The SeptimusB measures only 4 x 1 x 3.5 inches so it can travel with you wherever you go.',
   tags: {
     gender: ['women', 'men'],
-    ageRange: ['<21'],
+    ageRange: [0,21],
     adjectives: ['nerdy', 'funny', 'shy'],
   },
   rating: 5
@@ -148,7 +148,7 @@ var giftList = [{
   description: 'The heat-retaining properties of cast iron allow our tetsubin teapots to keep tea at the proper serving temperature for up to an hour The porcelain enamel interior keeps the taste of the tea pure and allow for easy cleaning ',
   tags: {
     gender: ['women'],
-    ageRange: ['40+'],
+    ageRange: [0,100],
     adjectives: ['sporty', 'shy'],
   },
   rating: 4
@@ -162,7 +162,7 @@ var giftList = [{
   description: '13 in. Tall Heavy Duty Steel Frame. Large 16 in. x 16 in. Cooking Surface. Accommodates any size Stockpot',
   tags: {
     gender: ['men'],
-    ageRange: ['21-40', '40+'],
+    ageRange: [21,100],
     adjectives: ['sporty', 'funny'],
   },
   rating: 2
@@ -176,7 +176,7 @@ var giftList = [{
   description: 'Ultra-responsive semi weighted keyboard with aftertouch. Full DAW/plug-in control surface with 8 knobs, 9 faders and buttons. Automap 4 control software enables instant hands - on access to your DAW and plug - ins. Multi - function drum pads enable you to warp arpeggios, roll beats and launch clips in Ableton Live Comes with Ableton Live Lite, Novations Bass Station synth and a Loopmasters sample pack ',
   tags: {
     gender: ['men'],
-    ageRange: ['21-40', '40+'],
+    ageRange: [21,100],
     adjectives: ['sporty', 'nerdy'],
   },
   rating: 5
@@ -190,7 +190,7 @@ var giftList = [{
   description: 'muse is your personal meditation assistant.. Sometimes your mind is calm and sometimes it is active.muse will guide you to a calm mind.. Put on the muse headband, put on your earbuds, start the app, and close your eyes.Immerse yourself within the sounds of a beach or rainforest.. While you meditate, muse measures whether your mind is calm or active, and translates that data into weathers sounds.. When you are calm, you will hear peaceful weather sounds.When your mind wanders, the weather will intensify, guiding you back to a calm state.. After each session, review your data, set goals, and build a deeply rewarding meditation practice that gets better every time.Kindly refer the user manual attached below for troubleshooting steps and instructions.',
   tags: {
     gender: ['men', 'women'],
-    ageRange: ['40+'],
+    ageRange: [0,100],
     adjectives: ['shy', 'nerdy'],
   },
   rating: 4
@@ -204,7 +204,7 @@ var giftList = [{
   description: 'Large slots for toasting bread, English muffins or bagel halves. Lighted control buttons with bagel, defrost, and cancel options. 5 browning control levels.Slide - out crumb tray ',
   tags: {
     gender: ['women', 'men'],
-    ageRange: ['21-40'],
+    ageRange: [21,40],
     adjectives: ['shy', 'funny'],
   },
   rating: 4
@@ -218,7 +218,7 @@ var giftList = [{
   description: 'Shell Back, Knit: 100% Polyester, Palm: 94% Polyester, 6% Lycra Spandex, Lining: 100% Polyester. Imported. Hand Wash. Gloves featuring elasticized cuffs and SmarTouch technology for touschreen compatibility. Non - slip palms for improved grip.Stretch material for flexibility ',
   tags: {
     gender: ['men'],
-    ageRange: ['21-40', '40+'],
+    ageRange: [21,100],
     adjectives: ['sporty', 'nerdy'],
   },
   rating: 2
@@ -232,7 +232,7 @@ var giftList = [{
   description: 'The most powerful 18 volt cordless hand vacuum available. Deep cleaning thanks to an extra - large detachable motorized brush for quick and easy cleanups of pet hair and ground - in dirt ',
   tags: {
     gender: ['women'],
-    ageRange: ['40+'],
+    ageRange: [0,100],
     adjectives: ['nerdy', 'funny'],
   },
   rating: 5
@@ -246,7 +246,7 @@ var giftList = [{
   description: 'Stunning Stereo Sound: Experience your music in stunning stereo realized through dual five-watt drivers and dedicated bass port.. Day - long Playtime: Breakthrough 24 - hour / 500 - song playtime powered by a built - in 6200 mAh Li - ion battery.. Bluetooth 4.0: Instantly connect to your smartphone or tablet from up to 33 feet away.It remembers the last eight devices used, so reconnecting is automatic.',
   tags: {
     gender: ['men'],
-    ageRange: ['<21', '21-40'],
+    ageRange: [0,40],
     adjectives: ['nerdy', 'funny'],
   },
   rating: 3
@@ -260,7 +260,7 @@ var giftList = [{
   description: 'Patented quick fold technology fold your stroller with one hand. 85 inch all terrain non flat tires with front wheel suspension provide a smooth comfortable ride. Plush padded seat reclines to a near flat position with vented seat top. Large adjustable sun canopy with peek a boo windows. Adjustable handlebar suits users of all heights. 85 " all terrain non flat tires with front wheel suspension provide a smooth comfortable ride',
   tags: {
     gender: ['women'],
-    ageRange: ['21-40'],
+    ageRange: [21,40],
     adjectives: ['sporty', 'shy'],
   },
   rating: 4
@@ -274,7 +274,7 @@ var giftList = [{
   description: 'Composite Wood Curved Cabinet, 4 - 3" Structured Surface Mid-Woofers, 2 - 1" Soft Dome Tweeters, 6 x 28 Watt Amplifiers, Bluetooth Music Streaming Built-in',
   tags: {
     gender: ['men'],
-    ageRange: ['40+'],
+    ageRange: [0,100],
     adjectives: ['funny', 'shy'],
   },
   rating: 5
@@ -288,7 +288,7 @@ var giftList = [{
   description: '100% Polyester, Imported, 600,10" high, 14" wide, Recessed three stage locking handle with push button,Soft and noiseless wheels for stable and controlled motion',
   tags: {
     gender: ['women'],
-    ageRange: ['<21'],
+    ageRange: [0,21],
     adjectives: ['sporty', 'funny'],
   },
   rating: 3
@@ -302,7 +302,7 @@ var giftList = [{
   description: '',
   tags: {
     gender: ['men'],
-    ageRange: ['40+'],
+    ageRange: [0,100],
     adjectives: ['sporty'],
   },
   rating: 2
