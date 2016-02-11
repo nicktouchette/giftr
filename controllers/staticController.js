@@ -3,15 +3,15 @@ var passport = require('passport');
 var staticController = function(User) {
 
   var index = function(req, res, next) {
-    res.render('index', { title: 'Home' });
+    res.render('index', { title: 'Home', message: req.flash() });
   };
 
   var loginForm = function(req, res, next) {
-    res.render('login', { title: 'Login' });
+    res.render('login', { title: 'Login', message: req.flash() });
   };
 
   var signupForm = function(req, res, next) {
-    res.render('signup', { title: 'Signup' });
+    res.render('signup', { title: 'Signup', message: req.flash() });
   };
 
   var login = function(req, res, next) {
