@@ -42,6 +42,7 @@ $(function() {
     var str = $("#search").find('input').not('[value=undefined]').serialize();
     console.log(str);
     var url = 'http://localhost:3000/gifts?' + str;
+
     // var gender = $('input[name=gender]:checked', '#search').val();
     // var maxPrice = $('input[name=maxPrice]', '#search').val();
     // var minPrice = $('input[name=minPrice]', '#search').val();
@@ -70,7 +71,7 @@ $(function() {
       var giftInfo = $("<div class='gift_info'></div>");
       var link = $("<a href='http://localhost:3000/gifts/" + id  + "'></a>");
       var img = "<img src='" + imgUrl + "'>";
-      var name = "<p class='gift_name'>" + result.name + "</p>";
+      var name = "<p class='gift_name'>" + result.name + " " + result.tags.ageRange + "</p>";
       var price = $("<p class='gift_price'>$" + result.price + ".00</p>");
       var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'>Add to Favorites</a>")
 
