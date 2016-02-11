@@ -137,15 +137,21 @@ var giftController = function(Gift) {
   var favorite = function(req, res, next) {
     Gift.findById(req.params.id)
     .then(function(gift) {
-      currentUser.favorites.push(gift);
-      return currentUser.save();
+      return currentUser.favorites;
+    })
+    .then(function(favorites) {
+      if (favorites.indexOf(req.params.id)) {
+        throw new Error("Favorite already exists");
+      } else {
+        currentUser.favorites.push(gift);
+        return currentUser.save();
+      }
     })
     .then(function(saved) {
       var savedId = saved.favorites[saved.favorites.length-1];
       return Gift.findById({_id: savedId});
     })
     .then(function(savedGift) {
-      console.log(savedGift);
       res.format({
         json: function() {
           res.json(savedGift);
@@ -155,7 +161,11 @@ var giftController = function(Gift) {
         }
       });
     }, function(err) {
-      return next(err);
+      if (err) {
+        res.redirect('/gifts');
+      } else {
+        return next(err);
+      }
     });
   };
 
