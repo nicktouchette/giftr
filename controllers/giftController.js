@@ -140,10 +140,11 @@ var giftController = function(Gift) {
       return currentUser.favorites;
     })
     .then(function(favorites) {
-      if (favorites.indexOf(req.params.id)) {
+      console.log(favorites.indexOf(req.params.id));
+      if (favorites.indexOf(req.params.id) !== -1) {
         throw new Error("Favorite already exists");
       } else {
-        currentUser.favorites.push(gift);
+        currentUser.favorites.push(req.params.id);
         return currentUser.save();
       }
     })
