@@ -5,11 +5,14 @@ var giftController = function(Gift) {
     if (req.query.categories) {
       var category = {$in: Array.isArray(req.query.categories)?req.query.categories:[req.query.categories]};
     }
+    if (req.query.maxPrice && req.query.minPrice) {
+      var price = {$lte: req.query.maxPrice, $gte: req.query.minPrice};
+    }
 
     var query = {
       recipientType: req.query.recipientType,
       'tags.gender': req.query.gender,
-      price: {$lte: req.query.maxPrice, $gte: req.query.minPrice},
+      price: price,
       categories: category
     };
 
