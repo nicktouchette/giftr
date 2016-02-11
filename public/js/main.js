@@ -86,7 +86,6 @@ $(function() {
 
       console.log(result);
       $container.append(gift);
-
     })
   }
 
