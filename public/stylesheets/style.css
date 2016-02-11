@@ -3020,6 +3020,8 @@ h2.inline {
 .img_row {
   margin: 15px 0; }
   .img_row img {
+    width: 150px;
+    height: 150px;
     margin-right: 15px; }
 
 #profile_form {
