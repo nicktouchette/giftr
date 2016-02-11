@@ -200,22 +200,43 @@ h2.inline {
         opacity: .75;
       }
 
+      .gift_info {
+        padding: 10px;
+        border-radius: 2px;
+        background-color: darken($primary, 10%);
+        color: $light-gray;
+
+      }
+
       .gift_name {
         font-weight: bold;
         font-size: 14px;
-        margin-top: 10px;
-        margin-bottom: 5px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
       }
 
       .gift_price {
+        color: #dde;
         margin: 5px 0;
         font-size: 13px;
       }
 
-      .gift_info {
-        padding: 10px;
-        background-color: darken($primary, 10%);
-        color: $light-gray;
+
+
+      .fav_btn {
+        color: #eef;
+        display: inline-block;
+        border-radius: 3px;
+        margin-top: 8px;
+        padding: 5px 10px;
+        background-color: darken($light-gray, 10%);
+        transition: background-color .4s;
+
+        &:hover {
+          background-color: darken($light-gray, 50%);
+        }
       }
     } // end .gift
 }
