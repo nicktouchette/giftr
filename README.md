@@ -52,11 +52,12 @@ Giftr is a gift generator application that provides the user with gift ideas bas
 * Express
 * Node
 * Bourbon
+* Neat
+* Gulp
+* Travis
+* Mocha
+* Supertest
+* Sinon
 
-
-
-###Links
-
-deployed: https://frozen-scrubland-65613.herokuapp.com/ 
-
-github site: https://github.com/cardnoles/GrandSlamTennis
+###Wireframes
+![wireframe1](https://files.slack.com/files-tmb/T0351JZQ0-F0M18T48P-411c9cb77a/img_0466_720.jpg)
