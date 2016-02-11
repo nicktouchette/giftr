@@ -185,12 +185,39 @@ h2.inline {
 
     .gift {
       @include span-columns(3);
-      @include omega;
-      a img {
-        width: 300px;
-        height: 250px;
+      transition: opacity .3s;
+
+      a {
+        text-decoration: none;
+        img {
+          width: 300px;
+          height: 250px;
+        }
+
       }
-    }
+
+      &:hover {
+        opacity: .75;
+      }
+
+      .gift_name {
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      .gift_price {
+        margin: 5px 0;
+        font-size: 13px;
+      }
+
+      .gift_info {
+        padding: 10px;
+        background-color: darken($primary, 10%);
+        color: $light-gray;
+      }
+    } // end .gift
 }
 
 

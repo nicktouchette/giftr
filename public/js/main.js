@@ -67,16 +67,20 @@ $(function() {
       var id = result._id;
       var imgUrl = result.imageUrl;
       var gift = $("<div class='gift'></div>");
+      var giftInfo = $("<div class='gift_info'></div>");
       var link = $("<a href='http://localhost:3000/gifts/" + id  + "'></a>");
       var img = "<img src='" + imgUrl + "'>";
-      var name = "<p>" + result.name + "</p>";
-      var price = $("<p>$" + result.price + "</p>");
+      var name = "<p class='gift_name'>" + result.name + "</p>";
+      var price = $("<p class='gift_price'>$" + result.price + "</p>");
+
+      $(giftInfo).append(img);
+
+      $(giftInfo).append(name);
+      $(giftInfo).append(price);
+
+      $(link).append(giftInfo);
 
       $(gift).append(link);
-      $(gift).append(name);
-      $(gift).append(price);
-
-      $(link).append(img);
 
       console.log(result);
       $container.append(gift);

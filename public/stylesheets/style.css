@@ -3073,11 +3073,27 @@ h2.inline {
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
-    margin-right: 0; }
+    transition: opacity .3s; }
     #gifts_container .gift:last-child {
       margin-right: 0; }
-    #gifts_container .gift a img {
-      width: 300px;
-      height: 250px; }
+    #gifts_container .gift a {
+      text-decoration: none; }
+      #gifts_container .gift a img {
+        width: 300px;
+        height: 250px; }
+    #gifts_container .gift:hover {
+      opacity: .75; }
+    #gifts_container .gift .gift_name {
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 5px; }
+    #gifts_container .gift .gift_price {
+      margin: 5px 0;
+      font-size: 13px; }
+    #gifts_container .gift .gift_info {
+      padding: 10px;
+      background-color: #1d7d74;
+      color: #EEE; }
 
 /*# sourceMappingURL=style.css.map */
