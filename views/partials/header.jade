@@ -18,3 +18,21 @@ header.navigation(role='banner')
                 a(href='/signup') Sign Up
               li.nav-link
                 a(href='/login') Log In
+
+
+.flash
+- if (typeof message !== 'undefined') {
+  - if (typeof message.error !== 'undefined' && message.error.length > 0) {
+    div.flash-error= message.error
+  - }
+  - if (typeof message.info !== 'undefined' && message.info.length > 0) {
+    div.flash-notice= message.info
+  - }
+  -if (typeof message.success !== 'undefined' && message.success.length > 0) {
+    div.flash-success= message.success
+  - }
+- }
+
+
+
+
