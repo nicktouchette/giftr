@@ -8,11 +8,19 @@ block content
   p Email:
     = ' ' + user.local.email
   p Username:
-  .img_row
-    h3 Favorite Gifts
-    -for(i=0;i < 5 && i < favorites.length; i++)
-        a
-          img(src=favorites[favorites.length - 1 - i].imageUrl)
+  #gifts_container
+    .img_row
+      h3 Favorite Gifts
+      -for(i=0;i < 5 && i < favorites.length; i++)
+        .gift
+          a(href="/gifts/" + favorites[favorites.length - 1 - i].id)
+            .gift_info
+              img(src=favorites[favorites.length - 1 - i].imageUrl)
+              p(class="gift_name")
+                = favorites[favorites.length - 1 - i].name
+              p(class="gift_price")
+                = "$" + favorites[favorites.length - 1 - i].price + ".00"
+          a(class="fav_btn") Remove
   .img_row
     h3 Gifts You've Rated
     - var n = 0

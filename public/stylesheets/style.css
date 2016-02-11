@@ -2999,7 +2999,7 @@ label {
   display: block;
   padding-bottom: 10px; }
 
-.btn {
+.btn, .btn-danger {
   display: inline-block;
   color: #EEE;
   background-color: #31aa9f;
@@ -3008,8 +3008,14 @@ label {
   text-decoration: none;
   margin-right: 10px;
   transition: background-color .4s; }
-  .btn:hover {
+  .btn:hover, .btn-danger:hover {
     background-color: #186860; }
+
+.btn-danger {
+  background-color: red; }
+  .btn-danger:hover {
+    background-color: #b30000;
+    cursor: pointer; }
 
 .option-btn {
   display: inline-block;
@@ -3155,6 +3161,7 @@ h2.inline {
       font-size: 13px; }
     #gifts_container .gift .fav_btn {
       color: #eef;
+      cursor: pointer;
       display: inline-block;
       border-radius: 3px;
       margin-top: 8px;

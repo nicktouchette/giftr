@@ -42,6 +42,7 @@ $(function() {
     var str = $("#search").find('input').not('[value=undefined]').serialize();
     console.log(str);
     var url = 'http://localhost:3000/gifts?' + str;
+
     // var gender = $('input[name=gender]:checked', '#search').val();
     // var maxPrice = $('input[name=maxPrice]', '#search').val();
     // var minPrice = $('input[name=minPrice]', '#search').val();
