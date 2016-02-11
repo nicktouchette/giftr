@@ -12,7 +12,7 @@ Nick
 
 ###Project Three
 
-Giftr is General Assembly's WDI-ATL cohort 5's third project. Giftr is a full-stack application that was developed using Mongo, Express and Node.  The technical requirements of the assignment included:
+Giftr is General Assembly's WDI-ATL cohort 5's third project. Giftr is a full-stack application that was developed using Mongo, Express and Node.  The technical requirements of this team project included:
 
 * Use Mongo & Express to build an API and a front-end that consumes it
 * Create an API using at least 2 related models, one of which should be a user
@@ -60,4 +60,5 @@ Giftr is a gift generator application that provides the user with gift ideas bas
 * Sinon
 
 ###Wireframes
-![wireframe1](https://files.slack.com/files-pri/T0351JZQ0-F0M18T48P/img_0466.jpg)
+
+###ERD
