@@ -19,12 +19,12 @@ block content
         | Female
       .form_group
         label(for="age", class="inline") Age:
-        input(type="number", name="age", id="age", value="0", max="100")
+        input(type="number", name="age", id="age", value="", max="100")
       .form_group
         label(for="minPrice", class="inline") Min. Price:
-        input(type="number", name="minPrice", id="minPrice", value="0", min="0", max="1000000")
+        input(type="number", name="minPrice", id="minPrice", value="", min="0", max="1000000")
         label(for="maxPrice", class="inline max_price") Max Price:
-        input(type="number", name="maxPrice", id="maxPrice", value="0", min="0", max="1000000")
+        input(type="number", name="maxPrice", id="maxPrice", value="", min="0", max="1000000")
       .form_group
         label(for="tags", class="cat_checkboxes") Tags:
           br
@@ -65,8 +65,8 @@ block content
       //- Change to checkboxes
       input(type="submit", value="Find Gift", class="btn")
       br
-  .img_row
-    #gifts_container
+  #gifts_container
+    .img_row
 
   //- ul
   //-   -each gift in gifts

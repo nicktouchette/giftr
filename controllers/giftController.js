@@ -1,17 +1,29 @@
 var giftController = function(Gift) {
 
   var index = function(req, res, next) {
-    console.log(req.query.categories);
-
+    // console.log(req.query.categories);
     if (req.query.categories) {
       var category = {$in: Array.isArray(req.query.categories)?req.query.categories:[req.query.categories]};
     }
 
+    var maxPrice = req.query.maxPrice === undefined?"500":req.query.maxPrice;
+    var minPrice = req.query.minPrice === undefined?"10":req.query.minPrice;
+
+
+    console.log('maxPrice:' + maxPrice);
+    console.log('query is:' + req.query.params);
     var query = {
       recipientType: req.query.recipientType,
       'tags.gender': req.query.gender,
+      // $and: [ { price: { $lte: maxPrice } }, { price: { $gte: minPrice } } ],
       categories: category
     };
+
+    // if ( req.query.maxPrice && req.query.minPrice) {
+    //   console.log(req.query.minPrice);
+    //   console.log("test");
+    //   query.push(price);
+    // }
 
     for (var i in query) {
       if (query[i] === null || query[i] === undefined) {
@@ -20,7 +32,7 @@ var giftController = function(Gift) {
     }
 
     console.log(query);
-    Gift.find(query)
+    Gift.find(query).limit(4)
       .then(function(gifts){
         res.format({
           json: function(){
