@@ -174,17 +174,10 @@ var giftController = function(Gift) {
       res.format({
         json: function() {
           res.json(savedGift);
-        },
-        html: function() {
-          res.render('gifts/show', { gift: savedGift });
         }
       });
     }, function(err) {
-      if (err) {
-        res.redirect('/gifts');
-      } else {
-        return next(err);
-      }
+      return next(err);
     });
   };
 

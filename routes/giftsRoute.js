@@ -15,7 +15,7 @@ var routes = function(Gift){
     .get(requireRole('admin'), giftController.edit);
 
   router.route('/:id/favorite')
-    .get(authenticate, giftController.favorite);
+    .post(authenticate, giftController.favorite);
 
   router.route('/:id')
     .delete(requireRole('admin'), giftController.destroy)

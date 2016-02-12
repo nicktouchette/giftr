@@ -10,12 +10,14 @@ $(function() {
   var animationIn = 'fadeInRight';
   var $lastEvent = $events.last();
 
-  var host = window.location.protocol + '//' + window.location.host + '/gifts';
+  var protocol = window.location.protocol;
+  var protocolhost = window.location.host;
+  var host = protocol + '//' + protocolhost + '/gifts';
   var url = host + '?';
 
-  if ($('#gifts_container').length > 0 && localStorage.recentlySearched) {
-    displayResults(JSON.parse(localStorage.recentlySearched));
-  }
+  // if ($('#gifts_container').length > 0 && localStorage.recentlySearched) {
+  //   displayResults(JSON.parse(localStorage.recentlySearched));
+  // }
 
   function fadeUpInterval () {
     var animateInterval = setInterval(fadeNext, 3000);
@@ -54,7 +56,7 @@ $(function() {
       method: "GET"
 
     }).done(function(data) {
-      localStorage.setItem('recentlySearched', JSON.stringify(data));
+      // localStorage.setItem('recentlySearched', JSON.stringify(data));
       displayResults(data);
     });
   }
@@ -72,8 +74,8 @@ $(function() {
       var img = "<img src='" + imgUrl + "'>";
       var name = "<p class='gift_name'>" + result.name + "</p>";
       var price = $("<p class='gift_price'>$" + result.price + ".00</p>");
-      var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'></a>");
-      var favBtnFilled = $("<a class='fav_btn_filled' href='/gifts/" + id + "/favorite'></a>");
+      var favBtn = $("<button class='fav_btn' action='/gifts/" + id + "/favorite'></button>");
+      var favBtnFilled = $("<button class='fav_btn_filled'></button>");
 
       $(giftInfo).append(img);
 
@@ -88,12 +90,26 @@ $(function() {
         $(gift).append(favBtnFilled);
       } else {
         $(gift).append(favBtn);
-      };
+      }
 
       $container.append(gift);
-    })
+    });
+    $('button.fav_btn').click(favorite);
   }
 
+  function favorite (event) {
+    event.preventDefault();
+    var $self = $(this);
+    var action = $(this).attr('action');
+    $.ajax({
+      url: protocol + '//' + protocolhost + action,
+      method: "POST",
+      dataType: "json"
+    }).done(function(data) {
+      $($self).removeClass('fav_btn');
+      $($self).addClass('fav_btn_filled');
+    });
+  }
 
   $('form#search').submit(searchGifts);
 });
