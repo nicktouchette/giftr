@@ -15,9 +15,9 @@ $(function() {
   var host = protocol + '//' + protocolhost + '/gifts';
   var url = host + '?';
 
-  // if ($('#gifts_container').length > 0 && localStorage.recentlySearched) {
-  //   displayResults(JSON.parse(localStorage.recentlySearched));
-  // }
+  if ($('#gifts_container').length > 0 && localStorage.recentlySearched) {
+    displayResults(JSON.parse(localStorage.recentlySearched));
+  }
 
   function fadeUpInterval () {
     var animateInterval = setInterval(fadeNext, 3000);
@@ -56,7 +56,7 @@ $(function() {
       method: "GET"
 
     }).done(function(data) {
-      // localStorage.setItem('recentlySearched', JSON.stringify(data));
+      localStorage.setItem('recentlySearched', JSON.stringify(data));
       displayResults(data);
     });
   }
@@ -108,6 +108,15 @@ $(function() {
     }).done(function(data) {
       $($self).removeClass('fav_btn');
       $($self).addClass('fav_btn_filled');
+      console.log(data);
+      oldRecords = JSON.parse(localStorage.recentlySearched);
+      for(i=0; i< oldRecords.length; i++) {
+        if (oldRecords[i]._id === data._id) {
+          oldRecords[i].isFavorite = true;
+        }
+      }
+      if (oldRecords)
+        localStorage.setItem('recentlySearched', JSON.stringify(oldRecords));
     });
   }
 

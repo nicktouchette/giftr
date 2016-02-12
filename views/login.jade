@@ -1,5 +1,7 @@
 extends layout
 block content
+  script.
+    localStorage.removeItem('recentlySearched');
   .center_form
     h2 Login
     form(method="post", action="/login")
