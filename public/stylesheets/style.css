@@ -3035,7 +3035,12 @@ label {
   text-decoration: none;
   margin-right: 10px;
   padding: 5px 10px;
-  background-color: #333; }
+  font-size: 8px;
+  background-color: #d5d5d5;
+  margin-left: 10px;
+  transition: background-color .3s; }
+  .option-btn:hover {
+    background-color: #333; }
 
 .inline {
   display: inline-block; }
@@ -3086,14 +3091,36 @@ label {
   .center_form h2 {
     text-align: center; }
 
+h1.inline {
+  margin-top: 20px; }
+
 h2.inline {
   margin-right: 15px; }
 
 .profile_info {
-  margin: 10px 0 10px 10px; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  color: #EEE;
+  padding: 20px 0 20px 30px;
+  margin: 10px 0 10px 10px;
+  background-color: #1d7d74; }
+  .profile_info:last-child {
+    margin-right: 0; }
+  .profile_info::after {
+    clear: both;
+    content: "";
+    display: table; }
   .profile_info img {
     width: 150px;
-    height: 150px; }
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 75px; }
+  .profile_info p .profile_label {
+    display: inline-block;
+    width: 100px; }
   .profile_info p {
     margin: 10px 0; }
 

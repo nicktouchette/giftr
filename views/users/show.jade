@@ -9,12 +9,13 @@ block content
       img(src=user.image, class="profile_img")
     - else
       img(src="/img/shopping-bag-placeholder.png", class="profile_img")
-    p <strong>Email:</strong>
+    p <strong class="profile_label">Email:</strong>
       = ' ' + user.local.email
-    p <strong>Username:</strong>
+    p <strong class="profile_label">Username:</strong>
      = ' ' + user.userName
-    p <strong>Location:</strong>
+    p <strong class="profile_label">Location:</strong>
      = ' ' + user.location
+    br
   #gifts_container
     .img_row
       h3.section_title Favorite Gifts
