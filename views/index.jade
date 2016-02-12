@@ -10,6 +10,7 @@ block content
       li.emoji <span>💍</span> Anniversaries
       li.emoji <span>🗓</span> Anyday
     .signup_buttons
-      a(class="btn", href='/signup') Sign Up
-      a(class="btn", href='/login') Log In
+      - if (!currentUser)
+        a(class="btn", href='/signup') Sign Up
+        a(class="btn", href='/login') Log In
 
