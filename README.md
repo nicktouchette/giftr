@@ -57,4 +57,4 @@ Giftr is a gift generator application that provides the user with gift ideas bas
 
 
 ###ERD
-<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/Screen%20Shot%202016-02-12%20at%209.36.12%20AM.png" width="300px" height="300px">
+<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/Screen%20Shot%202016-02-12%20at%209.36.12%20AM.png" width="400px" height="300px">
