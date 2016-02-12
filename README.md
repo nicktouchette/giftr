@@ -4,7 +4,7 @@ Chad,
 Sue,
 Nick
 
-Deployed App:
+Deployed App:  
 [Heroku](https://evening-gorge-84916.herokuapp.com/)
 
 Trello Board:
