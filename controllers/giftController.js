@@ -37,6 +37,8 @@ var giftController = function(Gift) {
             for (i=0; i < gifts.length; i++){
               if (currentUser.favorites.indexOf(gifts[i]._id) != -1) {
                 gifts[i].isFavorite = true;
+              } else {
+                gifts[i].isFavorite = false;
               }
             }
             res.json(gifts);
