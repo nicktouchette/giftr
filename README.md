@@ -19,9 +19,9 @@ Testing Status:
 
 ###Project Three
 
-####Team Members
-Chad Christensen
-Nick Touchette
+####Team Members  
+Chad Christensen  
+Nick Touchette  
 Sue Rasmussen  
 
 
@@ -67,12 +67,12 @@ Giftr is a gift generator application that provides the user with gift ideas bas
 * Add/Update/Delete gifts
 * Add/Update/Delete users
 
-####Languages, Frameworks and Technologies Used
+###Languages, Frameworks and Technologies Used
 * Front End: AJAX, HTML, JavaScript, jQuery, Jade, CSS, Sass, Bourbon, Neat, Local Storage
 * Back End: Mongo, Express, Node, Gulp
 * Testing: Travis, Mocha, Supertest, Sinon
 
-####Future Enhancements
+###Future Enhancements
 * Users will be able to add gifts, with Admin approval
 * User gift ratings
 * Make it responsive
