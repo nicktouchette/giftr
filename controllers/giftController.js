@@ -5,27 +5,23 @@ var giftController = function(Gift) {
     if (req.query.categories) {
       var category = {$in: Array.isArray(req.query.categories)?req.query.categories:[req.query.categories]};
     }
+
     if (req.query.maxPrice && req.query.minPrice) {
       var price = {$lte: req.query.maxPrice, $gte: req.query.minPrice};
     }
 
     if (req.query.age) {
-      var ageMin = {$gte: req.query.age};
-      var ageMax = {$lte: req.query.age};
-      // var ageMin = {$lte: req.query.age};
-      // var ageMax = {$gte: req.query.age};
-      console.log(ageMin);
-      console.log(ageMax);
+      var ageGreater = {$lte: Number(req.query.age)};
+      var ageLesser = {$gte: Number(req.query.age)};
     }
 
     var query = {
       recipientType: req.query.recipientType,
       'tags.gender': req.query.gender,
       price: price,
-      'tags.ageRange.0': ageMin,
-      'tags.ageRange.1': ageMax,
       categories: category,
-
+      'tags.ageMin': ageGreater,
+      'tags.ageMax': ageLesser,
     };
 
     for (var i in query) {
@@ -33,7 +29,6 @@ var giftController = function(Gift) {
         delete query[i];
       }
     }
-
     console.log(query);
     Gift.find(query).limit(6)
       .then(function(gifts){

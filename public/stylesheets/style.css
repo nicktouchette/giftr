@@ -3208,4 +3208,8 @@ h2.inline {
         #gifts_container .img_row .gift .fav_btn:hover {
           background-color: #484848; }
 
+#gift_image img {
+  height: 350px;
+  border: 10px solid #1d7d74; }
+
 /*# sourceMappingURL=style.css.map */
