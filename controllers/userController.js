@@ -98,6 +98,12 @@
       if (req.body.permission !== "") {
         userUpdateVars.permission = req.body.permission;
       }
+      if (req.body.userName !== "") {
+        userUpdateVars.userName = req.body.userName;
+      }
+      if (req.body.location !== "") {
+        userUpdateVars.location = req.body.location;
+      }
       return User.findByIdAndUpdate(req.params.id, {$set: userUpdateVars});
     })
     .then(function(query) {
