@@ -19,7 +19,8 @@ Testing Status:
 
 ###Project Three
 
-####Team Members-Chad Christensen  
+####Team Members
+-Chad Christensen  
 -Nick Touchette  
 -Sue Rasmussen  
 
