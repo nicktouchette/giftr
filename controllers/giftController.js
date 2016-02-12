@@ -1,5 +1,5 @@
 var giftController = function(Gift) {
-
+  var price;
   var index = function(req, res, next) {
     // console.log(req.query.categories);
     if (req.query.categories) {
@@ -7,7 +7,11 @@ var giftController = function(Gift) {
     }
 
     if (req.query.maxPrice && req.query.minPrice) {
-      var price = {$lte: req.query.maxPrice, $gte: req.query.minPrice};
+      price = {$lte: req.query.maxPrice, $gte: req.query.minPrice};
+    } else if (req.query.maxPrice) {
+      price = { $lte: req.query.maxPrice };
+    } else if (req.query.minPrice) {
+      price
     }
 
     if (req.query.age) {

@@ -297,6 +297,11 @@ h2.inline {
         background-image: url('../img/fav_filled.png');
       }
     } // end .gift
+  } // end .img_row
+
+  .gift_results {
+    @extend .img_row;
+
   }
 }
 
