@@ -81,7 +81,8 @@ $(function() {
       var img = "<img src='" + imgUrl + "'>";
       var name = "<p class='gift_name'>" + result.name + "</p>";
       var price = $("<p class='gift_price'>$" + result.price + ".00</p>");
-      var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'></a>")
+      var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'></a>");
+      var favBtnFilled = $("<a class='fav_btn_filled' href='/gifts/" + id + "/favorite'></a>");
 
       $(giftInfo).append(img);
 
@@ -91,7 +92,14 @@ $(function() {
       $(link).append(giftInfo);
 
       $(gift).append(link);
-      $(gift).append(favBtn);
+
+      if (result.isFavorite) {
+        $(gift).append(favBtnFilled);
+      } else {
+        $(gift).append(favBtn);
+      };
+
+
 
       console.log(result);
       $container.append(gift);
