@@ -7,11 +7,11 @@ var giftController = function(Gift) {
     }
 
     if (req.query.maxPrice && req.query.minPrice) {
-      price = {$lte: req.query.maxPrice, $gte: req.query.minPrice};
+      price = { $lte: req.query.maxPrice, $gte: req.query.minPrice};
     } else if (req.query.maxPrice) {
       price = { $lte: req.query.maxPrice };
     } else if (req.query.minPrice) {
-      price
+      price = { $gte: req.query.minPrice };
     }
 
     if (req.query.age) {
