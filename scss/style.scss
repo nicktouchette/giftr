@@ -282,7 +282,6 @@ h2.inline {
         right: 10px;
         height: 15px;
         width: 15px;
-        margin-top: 8px;
         // background-color: darken($light-gray, 10%);
         background-image: url('../img/fav_hollow.png');
         background-size: cover;
@@ -291,6 +290,11 @@ h2.inline {
         &:hover {
           background-image: url('../img/fav_filled.png');
         }
+      } // end of .fav_btn
+
+      .fav_btn_filled {
+        @extend .fav_btn;
+        background-image: url('../img/fav_filled.png');
       }
     } // end .gift
   }
