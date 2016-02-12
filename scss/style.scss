@@ -305,6 +305,9 @@ h2.inline {
       }
 
       .fav_btn {
+        background-color: transparent;
+        outline: none;
+        border: none;
         color: #eef;
         cursor: pointer;
         display: inline-block;

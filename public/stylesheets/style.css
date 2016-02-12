@@ -3220,6 +3220,9 @@ h2.inline {
         margin: 5px 0;
         font-size: 11px; }
       #gifts_container .img_row .gift .fav_btn, #gifts_container .gift_results .gift .fav_btn, #gifts_container .img_row .gift .fav_btn_filled, #gifts_container .gift_results .gift .fav_btn_filled {
+        background-color: transparent;
+        outline: none;
+        border: none;
         color: #eef;
         cursor: pointer;
         display: inline-block;
