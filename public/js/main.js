@@ -115,7 +115,6 @@ $(function() {
           oldRecords[i].isFavorite = true;
         }
       }
-      console.log(oldRecords);
       if (oldRecords)
         localStorage.setItem('recentlySearched', JSON.stringify(oldRecords));
     });
