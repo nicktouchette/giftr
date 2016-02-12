@@ -35,7 +35,7 @@ var giftController = function(Gift) {
     }
 
     console.log(query);
-    Gift.find(query).limit(4)
+    Gift.find(query).limit(6)
       .then(function(gifts){
         res.format({
           json: function(){

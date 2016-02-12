@@ -3092,17 +3092,29 @@ h2.inline {
 
 #gift_search {
   background-color: #d5d5d5;
-  padding: 15px 30px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  height: 395px;
+  padding: 15px 20px;
   border-radius: 4px;
   margin-bottom: 50px; }
+  #gift_search:last-child {
+    margin-right: 0; }
   #gift_search label {
     font-size: 18px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    width: 115px; }
+  #gift_search .label {
+    display: inline-block;
+    width: 115px; }
   #gift_search .max_price {
     margin-left: 20px; }
   #gift_search input[type=number] {
     height: 30px;
-    width: 100px; }
+    width: 90px;
+    margin-right: 8px; }
   #gift_search .cat_checkboxes {
     max-width: 68em;
     margin-left: auto;
@@ -3115,60 +3127,85 @@ h2.inline {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 23.23176%;
+      width: 31.76157%;
       margin-right: 0; }
       #gift_search .cat_checkboxes .check_column:last-child {
         margin-right: 0; }
+  #gift_search .first {
+    margin-left: 110px; }
+  #gift_search .radio {
+    display: inline-block;
+    margin-right: 15px;
+    width: 80px; }
+    #gift_search .radio input {
+      margin-left: 0;
+      color: pink; }
+  #gift_search #find_gift {
+    margin-top: 30px;
+    width: 100%; }
 
 #gifts_container {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  #gifts_container::after {
-    clear: both;
-    content: "";
-    display: table; }
-  #gifts_container .gift {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    transition: opacity .3s; }
-    #gifts_container .gift:last-child {
-      margin-right: 0; }
-    #gifts_container .gift a {
-      text-decoration: none; }
-      #gifts_container .gift a img {
-        width: 300px;
-        height: 250px; }
-    #gifts_container .gift:hover {
-      opacity: .75; }
-    #gifts_container .gift .gift_info {
-      padding: 10px;
-      border-radius: 2px;
-      background-color: #1d7d74;
-      color: #EEE; }
-    #gifts_container .gift .gift_name {
-      font-weight: bold;
-      font-size: 14px;
-      padding-bottom: 5px;
-      margin-top: 5px;
-      margin-bottom: 8px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-    #gifts_container .gift .gift_price {
-      color: #dde;
-      margin: 5px 0;
-      font-size: 13px; }
-    #gifts_container .gift .fav_btn {
-      color: #eef;
-      cursor: pointer;
-      display: inline-block;
-      border-radius: 3px;
-      margin-top: 8px;
-      padding: 5px 10px;
-      background-color: #d5d5d5;
-      transition: background-color .4s; }
-      #gifts_container .gift .fav_btn:hover {
-        background-color: #484848; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  #gifts_container:last-child {
+    margin-right: 0; }
+  #gifts_container .img_row {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0; }
+    #gifts_container .img_row::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #gifts_container .img_row .gift {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-right: 0;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      transition: opacity .3s; }
+      #gifts_container .img_row .gift:last-child {
+        margin-right: 0; }
+      #gifts_container .img_row .gift a {
+        text-decoration: none; }
+        #gifts_container .img_row .gift a img {
+          height: 115px;
+          width: 100%; }
+      #gifts_container .img_row .gift:hover {
+        opacity: .75; }
+      #gifts_container .img_row .gift .gift_info {
+        height: 195px;
+        padding: 6px;
+        border-radius: 2px;
+        background-color: #1d7d74;
+        color: #EEE; }
+      #gifts_container .img_row .gift .gift_name {
+        height: 36px;
+        font-weight: bold;
+        font-size: 12px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+      #gifts_container .img_row .gift .gift_price {
+        color: #dde;
+        margin: 5px 0;
+        font-size: 11px; }
+      #gifts_container .img_row .gift .fav_btn {
+        color: #eef;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 3px;
+        margin-top: 8px;
+        padding: 5px 10px;
+        background-color: #d5d5d5;
+        transition: background-color .4s; }
+        #gifts_container .img_row .gift .fav_btn:hover {
+          background-color: #484848; }
 
 /*# sourceMappingURL=style.css.map */

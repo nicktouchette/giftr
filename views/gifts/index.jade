@@ -5,65 +5,62 @@ block content
     form(method="get", action="/gifts/", id="search")
       .form_group
         label(for="recipientType", class="inline") Relationship:
-        input(type="radio", value="friend", name="recipientType")
-        | Friend
-        input(type="radio", value="family", name="recipientType")
-        | Family
-        input(type="radio", value="SO", name="recipientType")
-        | Lover
+        .radio
+          input(type="radio", value="friend", name="recipientType")
+          | Friend
+        .radio
+          input(type="radio", value="family", name="recipientType")
+          | Family
+        .radio
+          input(type="radio", value="SO", name="recipientType")
+          | Lover
       .form_group
         label(for="Gender", class="inline") Gender:
-        input(type="radio", value="men", name="gender")
-        | Male
-        input(type="radio", value="women", name="gender")
-        | Female
+        .radio
+          input(type="radio", value="men", name="gender")
+          | Male
+        .radio
+          input(type="radio", value="women", name="gender")
+          | Female
       .form_group
         label(for="age", class="inline") Age:
-        input(type="number", name="age", id="age", value="", max="100")
+        input(type="number", name="age", id="age", min="0", max="100")
       .form_group
-        label(for="minPrice", class="inline") Min. Price:
-        input(type="number", name="minPrice", id="minPrice", value="", min="0", max="1000000")
-        label(for="maxPrice", class="inline max_price") Max Price:
-        input(type="number", name="maxPrice", id="maxPrice", value="", min="0", max="1000000")
+        label(for="minPrice", class="inline") Price:
+        input(type="number", name="minPrice", id="minPrice", placeholder="Min", min="0", max="1000000")
+        input(type="number", name="maxPrice", id="maxPrice", placeholder="Max", min="0", max="1000000")
       .form_group
-        label(for="tags", class="cat_checkboxes") Tags:
-          br
-          .check_column
+
+        .label Tags:
+        br
+        .cat_checkboxes
+          .check_column.first
             .checkbox
-              label
-                input(type="checkbox", value="accessories", name="categories")
-                | Accessories
+              input(type="checkbox", value="accessories", name="categories")
+              | Accessories
             .checkbox
-              label
-                input(type="checkbox", value="electronics", name="categories")
-                | Electronics
+              input(type="checkbox", value="electronics", name="categories")
+              | Electronics
             .checkbox
-              label
-                input(type="checkbox", value="food and drink", name="categories")
-                | Food and Drink
+              input(type="checkbox", value="food and drink", name="categories")
+              | Food and Drink
             .checkbox
-              label
-                input(type="checkbox", value="games", name="categories")
-                | Games
-          .check_column
+              input(type="checkbox", value="games", name="categories")
+              | Games
+          .check_column.second
             .checkbox
-              label
-                input(type="checkbox", value="garden", name="categories")
-                | Garden
+              input(type="checkbox", value="garden", name="categories")
+              | Garden
             .checkbox
-              label
-                input(type="checkbox", value="home", name="categories")
-                | Home
+              input(type="checkbox", value="home", name="categories")
+              | Home
             .checkbox
-              label
-                input(type="checkbox", value="luggage and travel gear", name="categories")
-                | Travel Gear
+              input(type="checkbox", value="luggage and travel gear", name="categories")
+              | Travel Gear
             .checkbox
-              label
-                input(type="checkbox", value="sports", name="categories")
-                | Sports
-      //- Change to checkboxes
-      input(type="submit", value="Find Gift", class="btn")
+              input(type="checkbox", value="sports", name="categories")
+              | Sports
+      input(type="submit", value="Find Gift", class="btn", id="find_gift")
       br
   #gifts_container
     .img_row
