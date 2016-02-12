@@ -3166,6 +3166,7 @@ h2.inline {
       margin-right: 2.35765%;
       width: 31.76157%;
       margin-right: 0;
+      position: relative;
       margin-right: 5px;
       margin-bottom: 5px;
       transition: opacity .3s; }
@@ -3197,16 +3198,17 @@ h2.inline {
         margin: 5px 0;
         font-size: 11px; }
       #gifts_container .img_row .gift .fav_btn {
-        color: #eef;
+        position: absolute;
         cursor: pointer;
         display: inline-block;
-        border-radius: 3px;
+        height: 15px;
+        width: 15px;
         margin-top: 8px;
-        padding: 5px 10px;
-        background-color: #d5d5d5;
+        background-image: url("../img/fav_hollow.png");
+        background-size: cover;
         transition: background-color .4s; }
         #gifts_container .img_row .gift .fav_btn:hover {
-          background-color: #484848; }
+          background-image: url("../img/fav_filled.png"); }
 
 #gift_image img {
   height: 350px;

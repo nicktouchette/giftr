@@ -76,7 +76,7 @@ $(function() {
       var img = "<img src='" + imgUrl + "'>";
       var name = "<p class='gift_name'>" + result.name + "</p>";
       var price = $("<p class='gift_price'>$" + result.price + ".00</p>");
-      var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'>Add to Favorites</a>")
+      var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'></a>")
 
       $(giftInfo).append(img);
 
@@ -86,7 +86,7 @@ $(function() {
       $(link).append(giftInfo);
 
       $(gift).append(link);
-      // $(gift).append(favBtn);
+      $(gift).append(favBtn);
 
       console.log(result);
       $container.append(gift);
