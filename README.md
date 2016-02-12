@@ -7,10 +7,10 @@ Nick
 Deployed App:  
 [Heroku](https://evening-gorge-84916.herokuapp.com/)
 
-Trello Board:
+Trello Board:  
 [Trello](https://trello.com/b/reOpIKzG/project-3)
 
-Testing Status:
+Testing Status:  
 ![master](https://travis-ci.org/tiptoptrio/project3.svg?branch=master)
 
 
