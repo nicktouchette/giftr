@@ -10,6 +10,11 @@ $(function() {
   var animationIn = 'fadeInRight';
   var $lastEvent = $events.last();
 
+  if ($('#gifts_container').length > 0 && localStorage.recentlySearched) {
+    var data = JSON.parse(localStorage.recentlySearched);
+    displayResults(data);
+  }
+
   var host = window.location.protocol + '//' + window.location.host + '/gifts';
   var url = host + '?';
 
@@ -56,6 +61,7 @@ $(function() {
       method: "GET"
 
     }).done(function(data) {
+      localStorage.setItem('recentlySearched', JSON.stringify(data));
       displayResults(data);
       // console.log(results);
     });

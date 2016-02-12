@@ -5,11 +5,11 @@ var routes = function(Gift){
   var giftController = require('../controllers/giftController')(Gift);
 
   router.route('/')
-    .post(giftController.create)
-    .get(giftController.index);
+    .post(authenticate, giftController.create)
+    .get(authenticate, giftController.index);
 
   router.route('/new')
-    .get(giftController.newForm);
+    .get(requireRole('admin'), giftController.newForm);
 
   router.route('/:id/edit')
     .get(requireRole('admin'), giftController.edit);
