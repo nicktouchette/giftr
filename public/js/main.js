@@ -68,7 +68,7 @@ $(function() {
   }
 
   function displayResults(results) {
-    var $container = $(".img_row");
+    var $container = $(".gift_results");
     // console.log(results);
     $container.empty();
 
