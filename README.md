@@ -44,24 +44,18 @@ Giftr is a gift generator application that provides the user with gift ideas bas
 * Add/Update/Delete gifts
 * Add/Update/Delete users
 
-###Languages and Frameworks Used
-* HTML
-* Jade
-* CSS
-* Mongo
-* Express
-* Node
-* Bourbon
-* Neat
-* Gulp
-* Travis
-* Mocha
-* Supertest
-* Sinon
+###Languages, Frameworks and Technologies Used
+* Front End: AJAX, HTML, JavaScript, jQuery, Jade, CSS, Sass, Bourbon, Neat
+* Back End: Mongo, Express, Node, Gulp
+* Testing: Travis, Mocha, Supertest, Sinon
+* Local Storage
 
 ###Wireframes
 ![wireframe1](https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG)
 ![test](https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG width=100 height=200)
-<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG" width="100px" height="200px">
+<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG" width="150px" height="200px">
+<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG" width="150px" height="200px">
+
+
 
 ###ERD
