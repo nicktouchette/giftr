@@ -77,7 +77,7 @@
     var userUpdateVars = {};
     var userProfile;
 
-    User.findOne(req.params.id)
+    User.findById(req.params.id)
     .then (function(query) {
       userProfile = query;
       return User.findOne({'local.email': req.body.email});
