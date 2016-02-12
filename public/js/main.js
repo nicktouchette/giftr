@@ -10,13 +10,12 @@ $(function() {
   var animationIn = 'fadeInRight';
   var $lastEvent = $events.last();
 
-  if ($('#gifts_container').length > 0 && localStorage.recentlySearched) {
-    var data = JSON.parse(localStorage.recentlySearched);
-    displayResults(data);
-  }
-
   var host = window.location.protocol + '//' + window.location.host + '/gifts';
   var url = host + '?';
+
+  if ($('#gifts_container').length > 0 && localStorage.recentlySearched) {
+    displayResults(JSON.parse(localStorage.recentlySearched));
+  }
 
   function fadeUpInterval () {
     var animateInterval = setInterval(fadeNext, 3000);
@@ -91,7 +90,6 @@ $(function() {
         $(gift).append(favBtn);
       };
 
-      console.log(result);
       $container.append(gift);
     })
   }

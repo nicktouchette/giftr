@@ -6,7 +6,7 @@ block content
   br
   .profile_info
     - if (user.image)
-    img(src=user.image, class="profile_img")
+      img(src=user.image, class="profile_img")
     - else
       img(src="/img/shopping-bag-placeholder.png", class="profile_img")
     p <strong>Email:</strong>
@@ -28,7 +28,8 @@ block content
               p(class="gift_price")
                 = "$" + favorites[favorites.length - 1 - i].price + ".00"
           //- a(class="fav_btn") Remove
-    h3.section_title Recent Results
-    .gift_results
+    - if (user.id === currentUser.id)
+      h3.section_title Recent Results
+      .gift_results
 
 
