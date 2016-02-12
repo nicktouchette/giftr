@@ -160,20 +160,29 @@ h2.inline {
 // Find Gifts Page
 #gift_search {
   background-color: darken($light-gray, 10%);
-  padding: 15px 30px;
+  @include span-columns(6);
+  height: 395px;
+  padding: 15px 20px;
   border-radius: 4px;
   margin-bottom: 50px;
 
   label {
     font-size: 18px;
     margin-right: 10px;
+    width: 115px;
+  }
+
+  .label {
+    display: inline-block;
+    width: 115px;
   }
 
   .max_price {
     margin-left: 20px;
   }
   input[type=number] {
-    @include size(100px 30px);
+    @include size(90px 30px);
+    margin-right: 8px;
   }
 
   .cat_checkboxes {
@@ -184,26 +193,51 @@ h2.inline {
     }
 
     .check_column {
-      @include span-columns(3);
+      @include span-columns(4);
       @include omega;
     }
 
+  } // end .cat_checkboxes
+
+  .first {
+    margin-left: 110px;
+  }
+
+  .radio {
+    display: inline-block;
+    margin-right: 15px;
+    width: 80px;
+
+    input {
+      margin-left: 0;
+      color: pink;
+    }
+  }
+
+  #find_gift {
+    margin-top: 30px;
+    width: 100%;
   }
 
 } // end of #gift_search
 
 #gifts_container {
-  @include outer-container;
-
+  @include span-columns(6)
+  .img_row {
+    @include outer-container;
+    margin-top: 0;
     .gift {
-      @include span-columns(3);
+      @include span-columns(4);
+      @include omega;
+      margin-right: 5px;
+      margin-bottom: 5px;
       transition: opacity .3s;
 
       a {
         text-decoration: none;
         img {
-          width: 300px;
-          height: 250px;
+          height: 115px;
+          width: 100%;
         }
       }
 
@@ -212,16 +246,20 @@ h2.inline {
       }
 
       .gift_info {
-        padding: 10px;
+        height: 195px;
+        padding: 6px;
         border-radius: 2px;
         background-color: darken($primary, 10%);
+
+
         color: $light-gray;
 
       }
 
       .gift_name {
+        height: 36px;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         padding-bottom: 5px;
         margin-top: 5px;
         margin-bottom: 8px;
@@ -231,10 +269,8 @@ h2.inline {
       .gift_price {
         color: #dde;
         margin: 5px 0;
-        font-size: 13px;
+        font-size: 11px;
       }
-
-
 
       .fav_btn {
         color: #eef;
@@ -251,7 +287,19 @@ h2.inline {
         }
       }
     } // end .gift
+  }
 }
+
+#gift_image {
+
+
+    img {
+        // width: 400px;
+        height: 350px;
+        border: 10px solid darken($primary, 10%);
+    }
+}
+
 
 
 
