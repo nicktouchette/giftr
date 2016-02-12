@@ -29,11 +29,16 @@ var giftController = function(Gift) {
         delete query[i];
       }
     }
-    console.log(query);
-    Gift.find(query).limit(6)
+
+    Gift.find(query).lean().limit(6)
       .then(function(gifts){
         res.format({
           json: function(){
+            for (i=0; i < gifts.length; i++){
+              if (currentUser.favorites.indexOf(gifts[i]._id) != -1) {
+                gifts[i].isFavorite = true;
+              }
+            }
             res.json(gifts);
           },
           html: function(){
