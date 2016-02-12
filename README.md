@@ -19,6 +19,12 @@ Testing Status:
 
 ###Project Three
 
+####Team Members
+Chad Christensen
+Nick Touchette
+Sue Rasmussen  
+
+
 Giftr is General Assembly's WDI-ATL cohort 5's third project. Giftr is a full-stack application that was developed using Mongo, Express and Node.  The technical requirements of this team project included:
 
 * Use Mongo & Express to build an API and a front-end that consumes it
@@ -31,9 +37,19 @@ Giftr is General Assembly's WDI-ATL cohort 5's third project. Giftr is a full-st
 * Layout and style your front-end with clean & well-formatted CSS
 * Deploy your application online so it's publically accessible
 
+###Wireframes
+<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0466.JPG" width="250px" height="350px">
+<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG" width="250px" height="350px">
+
+
+
+###ERD
+<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/Screen%20Shot%202016-02-12%20at%209.36.12%20AM.png" width="400px" height="300px">
+
+
 ###Giftr Basics
 
-Giftr is a gift generator application that provides the user with gift ideas based on parameters supplied by the user. The user can also add gifts to the database (with admin approval), track gifts viewed and identify favorites.
+Giftr is a gift generator application that provides the user with gift ideas based on parameters supplied by the user. The user can also track gifts viewed and identify favorites.
 
 
 ###User Process
@@ -51,17 +67,16 @@ Giftr is a gift generator application that provides the user with gift ideas bas
 * Add/Update/Delete gifts
 * Add/Update/Delete users
 
-###Languages, Frameworks and Technologies Used
-* Front End: AJAX, HTML, JavaScript, jQuery, Jade, CSS, Sass, Bourbon, Neat
+####Languages, Frameworks and Technologies Used
+* Front End: AJAX, HTML, JavaScript, jQuery, Jade, CSS, Sass, Bourbon, Neat, Local Storage
 * Back End: Mongo, Express, Node, Gulp
 * Testing: Travis, Mocha, Supertest, Sinon
-* Local Storage
 
-###Wireframes
-<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0466.JPG" width="250px" height="350px">
-<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG" width="250px" height="350px">
+####Future Enhancements
+* Users will be able to add gifts, with Admin approval
+* User gift ratings
+* Make it responsive
+* Connect with an external product/gift API
 
 
 
-###ERD
-<img src="https://github.com/tiptoptrio/project3/blob/master/assetsREADME/Screen%20Shot%202016-02-12%20at%209.36.12%20AM.png" width="400px" height="300px">
