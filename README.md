@@ -1,7 +1,7 @@
 # project3
 ![master](https://travis-ci.org/tiptoptrio/project3.svg?branch=master)
 [Heroku](https://evening-gorge-84916.herokuapp.com/)
-![Trello](https://trello.com/b/reOpIKzG/project-3)
+[Trello](https://trello.com/b/reOpIKzG/project-3)
 
 
 A web application using the MEN stack consuming an API created by us
