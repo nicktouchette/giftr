@@ -3197,24 +3197,22 @@ h2.inline {
         color: #dde;
         margin: 5px 0;
         font-size: 11px; }
-      #gifts_container .img_row .gift .fav_btn {
-        position: absolute;
+      #gifts_container .img_row .gift .fav_btn, #gifts_container .img_row .gift .fav_btn_filled {
+        color: #eef;
         cursor: pointer;
         display: inline-block;
-<<<<<<< HEAD
-=======
         position: absolute;
         bottom: 8px;
         right: 10px;
->>>>>>> favs
         height: 15px;
         width: 15px;
-        margin-top: 8px;
         background-image: url("../img/fav_hollow.png");
         background-size: cover;
         transition: background-color .4s; }
-        #gifts_container .img_row .gift .fav_btn:hover {
+        #gifts_container .img_row .gift .fav_btn:hover, #gifts_container .img_row .gift .fav_btn_filled:hover {
           background-image: url("../img/fav_filled.png"); }
+      #gifts_container .img_row .gift .fav_btn_filled {
+        background-image: url("../img/fav_filled.png"); }
 
 #gift_image {
   padding: 0px 25%;
