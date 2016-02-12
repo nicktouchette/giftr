@@ -19,7 +19,7 @@ Testing Status:
 
 ###Project Three
 
-####Team Members  
+####Team Members
 Chad Christensen  
 Nick Touchette  
 Sue Rasmussen  
