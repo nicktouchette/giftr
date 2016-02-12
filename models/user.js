@@ -11,7 +11,12 @@ var userSchema = new mongoose.Schema({
     type: String,
     default: 'user'
   },
-  favorites: [{ type: mongoose.Schema.ObjectId, ref: 'Gift'}]
+  userName: String,
+  location: String,
+  image: String,
+
+  favorites: [{ type: mongoose.Schema.ObjectId, ref: 'Gift'}],
+  recents: [{ type: mongoose.Schema.ObjectId, ref: 'Gift'}]
 });
 
 userSchema.methods.encrypt = function(password) {
