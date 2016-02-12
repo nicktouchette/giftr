@@ -1,4 +1,4 @@
-var userController = function(User) {
+  var userController = function(User) {
 
   var index = function(req, res, next) {
     User.find({})
@@ -75,45 +75,47 @@ var userController = function(User) {
 
   var update = function(req, res, next) {
     var userUpdateVars = {};
+    var userProfile;
 
-    if (req.body.email !== "" && req.body.email !== currentUser.local.email) {
-      User.findOne({'local.email': req.body.email})
-      .then (function(user) {
-        console.log(user);
+    User.findOne(req.params.id)
+    .then (function(query) {
+      userProfile = query;
+      return User.findOne({'local.email': req.body.email});
+    })
+    .then (function(user) {
+      if (req.body.email !== userProfile.local.email) {
         if (!user) {
-          console.log("saving");
           return User.findByIdAndUpdate(req.params.id, {$set: {'local.email': req.body.email}});
         } else {
-          console.log(user);
           throw new Error("Email already exists");
         }
-      })
-      .then(function() {
-        if (req.body.password !== "") {
-          userUpdateVars['local.password'] = currentUser.encrypt(req.body.password);
-        }
-        if (req.body.permission !== "") {
-          userUpdateVars.permission = req.body.permission;
-        }
-        return User.findByIdAndUpdate(req.params.id, {$set: userUpdateVars});
-      })
-      .then(function(query) {
-        res.format({
-          json: function() {
-            res.json(req.status);
-          },
-          html: function() {
-            res.redirect('/users/' + req.params.id);
-          }
-        });
-      }, function(err) {
-        if (err) {
-          res.redirect('/users/' + req.params.id + '/edit');
-        } else {
-          return next(err);
+      }
+    })
+    .then(function() {
+      if (req.body.password !== "") {
+        userUpdateVars['local.password'] = currentUser.encrypt(req.body.password);
+      }
+      if (req.body.permission !== "") {
+        userUpdateVars.permission = req.body.permission;
+      }
+      return User.findByIdAndUpdate(req.params.id, {$set: userUpdateVars});
+    })
+    .then(function(query) {
+      res.format({
+        json: function() {
+          res.json(req.status);
+        },
+        html: function() {
+          res.redirect('/users/' + req.params.id);
         }
       });
-    }
+    }, function(err) {
+      if (err) {
+        res.redirect('/users/' + req.params.id + '/edit');
+      } else {
+        return next(err);
+      }
+    });
   };
 
   var show = function(req, res, next) {

@@ -4,7 +4,7 @@ var should = require('should'),
 describe('User Controller Tests', function() {
   describe('Post', function() {
     it.skip('should not allow an empty email on post', function() {
-      var User = function(user){this.save = function(){};};
+      var User = function(user){this.save = function(){this.then = function(){};};};
 
       var req = {
         body: {
