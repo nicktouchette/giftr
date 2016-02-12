@@ -23,7 +23,8 @@ Testing Status:
 -Chad Christensen  
 -Nick Touchette  
 -Sue Rasmussen  
-
+  
+  
 
 Giftr is General Assembly's WDI-ATL cohort 5's third project. Giftr is a full-stack application that was developed using Mongo, Express and Node.  The technical requirements of this team project included:
 
