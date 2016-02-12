@@ -3201,6 +3201,12 @@ h2.inline {
         position: absolute;
         cursor: pointer;
         display: inline-block;
+<<<<<<< HEAD
+=======
+        position: absolute;
+        bottom: 8px;
+        right: 10px;
+>>>>>>> favs
         height: 15px;
         width: 15px;
         margin-top: 8px;

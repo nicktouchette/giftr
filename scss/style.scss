@@ -274,14 +274,15 @@ h2.inline {
       }
 
       .fav_btn {
-        // color: #eef;
-        position: absolute;
+        color: #eef;
         cursor: pointer;
         display: inline-block;
-        @include size(15px 15px);
-        // border-radius: 3px;
+        position: absolute;
+        bottom: 8px;
+        right: 10px;
+        height: 15px;
+        width: 15px;
         margin-top: 8px;
-        // padding: 5px 10px;
         // background-color: darken($light-gray, 10%);
         background-image: url('../img/fav_hollow.png');
         background-size: cover;

@@ -70,7 +70,6 @@ $(function() {
       var id = result._id;
       var imgUrl = result.imageUrl;
       var gift = $("<div class='gift animated bounceInUp'></div>");
-      // var giftResults = $("div id='gifts_results'></div>");
       var giftInfo = $("<div class='gift_info'></div>");
       var link = $("<a href='" + host + "/" + id  + "'></a>");
       var img = "<img src='" + imgUrl + "'>";
