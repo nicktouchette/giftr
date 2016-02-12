@@ -20,18 +20,6 @@ block content
                 = favorites[favorites.length - 1 - i].name
               p(class="gift_price")
                 = "$" + favorites[favorites.length - 1 - i].price + ".00"
-          a(class="fav_btn") Remove
-  .img_row
-    h3 Gifts You've Rated
-    - var n = 0
-      while n < 5
-        a
-          img(src="http://placehold.it/150x150")
-          - n++
-  .img_row
-    h3 Recently Viewed
-    - var n = 0
-      while n < 5
-        a
-          img(src="http://placehold.it/150x150")
-          - n++
+          //- a(class="fav_btn") Remove
+    .img_row
+      h3 Recently Viewed

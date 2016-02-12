@@ -70,13 +70,12 @@ $(function() {
       var id = result._id;
       var imgUrl = result.imageUrl;
       var gift = $("<div class='gift animated bounceInUp'></div>");
-      // var giftResults = $("div id='gifts_results'></div>");
       var giftInfo = $("<div class='gift_info'></div>");
       var link = $("<a href='" + host + "/" + id  + "'></a>");
       var img = "<img src='" + imgUrl + "'>";
       var name = "<p class='gift_name'>" + result.name + "</p>";
       var price = $("<p class='gift_price'>$" + result.price + ".00</p>");
-      var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'>Add to Favorites</a>")
+      var favBtn = $("<a class='fav_btn' href='/gifts/" + id + "/favorite'></a>")
 
       $(giftInfo).append(img);
 
@@ -86,7 +85,7 @@ $(function() {
       $(link).append(giftInfo);
 
       $(gift).append(link);
-      // $(gift).append(favBtn);
+      $(gift).append(favBtn);
 
       console.log(result);
       $container.append(gift);
