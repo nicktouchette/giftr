@@ -21,6 +21,10 @@ block content
             input(type="text", name="location", id="location", value=user.location)
 
           .form_group
+            label(for="image") Profile Image
+            input(type="text", name="image", id="image", value=user.image)
+
+          .form_group
             label(for="permission") Permission
             - var permission = user.permission
             input(type="radio", name="permission", value="admin", checked= permission==="admin"? 'checked' : null)

@@ -5,7 +5,10 @@ block content
       a(href= "/users/" + user.id + "/edit", class="option-btn") Edit
   br
   .profile_info
-    img(src="http://placehold.it/100x100", class="profile_img")
+    - if (user.image)
+    img(src=user.image, class="profile_img")
+    - else
+      img(src="/img/shopping-bag-placeholder.png", class="profile_img")
     p <strong>Email:</strong>
       = ' ' + user.local.email
     p <strong>Username:</strong>

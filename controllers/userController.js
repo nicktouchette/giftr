@@ -95,14 +95,17 @@
       if (req.body.password !== "") {
         userUpdateVars['local.password'] = currentUser.encrypt(req.body.password);
       }
-      if (req.body.permission !== "") {
+      if (req.body.permission !== "" && userProfile.permission !== req.body.permission) {
         userUpdateVars.permission = req.body.permission;
       }
-      if (req.body.userName !== "") {
+      if (req.body.userName !== "" && userProfile.userName !== req.body.userName) {
         userUpdateVars.userName = req.body.userName;
       }
-      if (req.body.location !== "") {
+      if (req.body.location !== "" && userProfile.location !== req.body.location) {
         userUpdateVars.location = req.body.location;
+      }
+      if (userProfile.image !== req.body.image) {
+        userUpdateVars.image = req.body.image;
       }
       return User.findByIdAndUpdate(req.params.id, {$set: userUpdateVars});
     })
