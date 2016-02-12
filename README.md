@@ -60,6 +60,6 @@ Giftr is a gift generator application that provides the user with gift ideas bas
 * Sinon
 
 ###Wireframes
-![wireframe1]()
+![wireframe1](https://github.com/tiptoptrio/project3/blob/master/assetsREADME/IMG_0465.JPG)
 
 ###ERD
