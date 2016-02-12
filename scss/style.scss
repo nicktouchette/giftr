@@ -296,13 +296,25 @@ h2.inline {
 }
 
 #gift_image {
-
+  padding: 0px 25%;
+  width: 100%;
 
     img {
-        // width: 400px;
+        margin: 0px 18%;
         height: 350px;
         border: 10px solid darken($primary, 10%);
     }
+}
+
+#gift_name {
+  text-align: center;
+  p {
+    font-size: 12px;
+  }
+}
+
+#gift_description {
+  padding: 0 8%;
 }
 
 

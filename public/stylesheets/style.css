@@ -3210,8 +3210,20 @@ h2.inline {
         #gifts_container .img_row .gift .fav_btn:hover {
           background-image: url("../img/fav_filled.png"); }
 
-#gift_image img {
-  height: 350px;
-  border: 10px solid #1d7d74; }
+#gift_image {
+  padding: 0px 25%;
+  width: 100%; }
+  #gift_image img {
+    margin: 0px 18%;
+    height: 350px;
+    border: 10px solid #1d7d74; }
+
+#gift_name {
+  text-align: center; }
+  #gift_name p {
+    font-size: 12px; }
+
+#gift_description {
+  padding: 0 8%; }
 
 /*# sourceMappingURL=style.css.map */

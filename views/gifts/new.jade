@@ -2,3 +2,28 @@ extends ../layout.jade
 
 block content
   h1 GIFT FORM
+
+    .center_form
+
+    form(method="post", action="/new")
+      label(for="gift name") Gift Name
+      input(type="name", name="name", id="name")
+      br
+      label(for="gift price") Price
+      input(type="price", name="price", id="price")
+      br
+      label(for="categories") Categories
+      p choose from: accessories, luggage and travel gear, sports, garden, home, games, food and drink, electronic, apparel
+      input(type="categories", name="categories", id="categories")
+      br
+      label(for="recipientType") Recipient
+      p choose from: friend, family, SO
+      input(type="recipientType", name="recipientType", id="recipientType")
+      br
+      label(for="link") Amazon URL for gift
+      input(type="link", name="link", id="link")
+      br
+
+
+
+      input(type="submit", class="btn" value="create new gift")
