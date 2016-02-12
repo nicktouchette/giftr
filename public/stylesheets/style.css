@@ -2958,6 +2958,12 @@ body {
 img {
   max-width: 100%; }
 
+#hero {
+  padding: 75px;
+  background-image: url("../img/shopping-bags.png");
+  background-position: center;
+  background-size: cover; }
+
 .container {
   max-width: 68em;
   margin-left: auto;
@@ -2974,7 +2980,10 @@ img {
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
-  margin-left: 17.05961%; }
+  margin-left: 17.05961%;
+  padding-bottom: 35px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9); }
   .center:last-child {
     margin-right: 0; }
 
@@ -3042,7 +3051,9 @@ label {
   font-size: 52px;
   font-weight: normal;
   font-family: 'Courgette', cursive;
-  text-align: center; }
+  text-align: center;
+  color: #186860;
+  margin-bottom: 20px; }
 
 .events {
   position: relative;
@@ -3051,7 +3062,7 @@ label {
   height: 100px;
   margin: 0 auto; }
   .events .emoji {
-    font-size: 40px; }
+    font-size: 52px; }
     .events .emoji span {
       margin-right: 8px; }
   .events li {

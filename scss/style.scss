@@ -18,6 +18,13 @@ img {
   max-width: 100%;
 }
 
+#hero {
+  padding: 75px;
+  background-image: url('../img/shopping-bags.png');
+  background-position: center;
+  background-size: cover;
+}
+
 .container {
   @include outer-container;
   padding-top: 50px;
@@ -27,6 +34,9 @@ img {
 .center {
   @include span-columns(8);
   @include shift(2);
+  padding-bottom: 35px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .9);
 }
 
 input[type=text], input[type=password], input[type=email] {
@@ -98,6 +108,8 @@ label {
   font-weight: normal;
   font-family: 'Courgette', cursive;
   text-align: center;
+  color: darken($primary, 15%);
+  margin-bottom: 20px;
 }
 
 .events {
@@ -108,7 +120,7 @@ label {
   margin: 0 auto;
 
   .emoji {
-    font-size: 40px;
+    font-size: 52px;
 
     span {
       margin-right: 8px;
