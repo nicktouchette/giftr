@@ -75,25 +75,45 @@ var userController = function(User) {
 
   var update = function(req, res, next) {
     var userUpdateVars = {};
-    if (req.body.email !== "") { userUpdateVars['local.email'] = req.body.email; }
-    if (req.body.password !== "") { userUpdateVars['local.password'] = req.body.password; }
-    if (req.body.permission !== "") { userUpdateVars.permission = req.body.permission; }
 
-    console.log(userUpdateVars);
-    User.findByIdAndUpdate(req.params.id, {$set: userUpdateVars})
-    .then(function(query) {
-      console.log(query);
-      res.format({
-        json: function() {
-          res.json(req.status);
-        },
-        html: function() {
-          res.redirect('/users/' + req.params.id);
+    if (req.body.email !== "" && req.body.email !== currentUser.local.email) {
+      User.findOne({'local.email': req.body.email})
+      .then (function(user) {
+        console.log(user);
+        if (!user) {
+          console.log("saving");
+          return User.findByIdAndUpdate(req.params.id, {$set: {'local.email': req.body.email}});
+        } else {
+          console.log(user);
+          throw new Error("Email already exists");
+        }
+      })
+      .then(function() {
+        if (req.body.password !== "") {
+          userUpdateVars['local.password'] = currentUser.encrypt(req.body.password);
+        }
+        if (req.body.permission !== "") {
+          userUpdateVars.permission = req.body.permission;
+        }
+        return User.findByIdAndUpdate(req.params.id, {$set: userUpdateVars});
+      })
+      .then(function(query) {
+        res.format({
+          json: function() {
+            res.json(req.status);
+          },
+          html: function() {
+            res.redirect('/users/' + req.params.id);
+          }
+        });
+      }, function(err) {
+        if (err) {
+          res.redirect('/users/' + req.params.id + '/edit');
+        } else {
+          return next(err);
         }
       });
-    }, function(err) {
-      return next(err);
-    });
+    }
   };
 
   var show = function(req, res, next) {
