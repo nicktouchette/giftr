@@ -1,6 +1,6 @@
 extends ../layout
 block content
-  h1.inline Your Profile
+  h1.inline= user.id === currentUser.id?"Your Profile":(user.local.email + "'s Profile")
   - if (user.id === currentUser.id || currentUser.permission === 'admin')
       a(href= "/users/" + user.id + "/edit", class="option-btn") Edit
   br
@@ -8,6 +8,9 @@ block content
   p Email:
     = ' ' + user.local.email
   p Username:
+   = ' ' + user.userName
+  p Location:
+   = ' ' + user.location
   #gifts_container
     .img_row
       h3 Favorite Gifts

@@ -4,5 +4,9 @@ block content
   ul
     -each user in users
       li
-        h1= user.local.email
-        h1= user.id
+        h1
+          a(href='/users/' + user.id)
+            = user.local.email
+        a(href= "/users/" + user.id + "/edit", class="option-btn") Edit
+        form(action="/users/" + user.id + "?_method=DELETE", method="post")
+          input(type="submit", class="option-btn", value="Delete")

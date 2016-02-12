@@ -2,13 +2,13 @@ extends ../layout.jade
 
 block content
 
-  h2 <strong>#{gift.name}</strong>
-  p click on image to purchase
+  h2#gift_name <strong>#{gift.name}</strong>
+    p click image to begin purchase process
   div#gift_image
     a(href='#{gift.link}')
      img( src= "#{gift.imageUrl}" )
 
-  p #{gift.description}
+  p#gift_description #{gift.description}
 
 
 
