@@ -50,12 +50,6 @@ $(function() {
     var str = $("#search").find('input').not('[value=undefined]').serialize();
     console.log(str);
 
-    // var gender = $('input[name=gender]:checked', '#search').val();
-    // var maxPrice = $('input[name=maxPrice]', '#search').val();
-    // var minPrice = $('input[name=minPrice]', '#search').val();
-    // var recipientType = $('input[name=recipientType]:checked', '#search').val();
-    // var categories = $('input[name="categories"]:checked', '#search').serialize();
-    // console.log(categories);
     $.ajax({
       url: url + str,
       method: "GET"
@@ -63,13 +57,11 @@ $(function() {
     }).done(function(data) {
       localStorage.setItem('recentlySearched', JSON.stringify(data));
       displayResults(data);
-      // console.log(results);
     });
   }
 
   function displayResults(results) {
     var $container = $(".gift_results");
-    // console.log(results);
     $container.empty();
 
     results.forEach(function(result) {
@@ -98,8 +90,6 @@ $(function() {
       } else {
         $(gift).append(favBtn);
       };
-
-
 
       console.log(result);
       $container.append(gift);

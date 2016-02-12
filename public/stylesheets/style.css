@@ -3034,6 +3034,9 @@ label {
 .form_group {
   margin: 10px 0 10px 0; }
 
+.section_title {
+  margin-bottom: 20px; }
+
 .tagline {
   float: none;
   font-size: 52px;
@@ -3074,6 +3077,14 @@ label {
 
 h2.inline {
   margin-right: 15px; }
+
+.profile_info {
+  margin: 10px 0 10px 10px; }
+  .profile_info img {
+    width: 150px;
+    height: 150px; }
+  .profile_info p {
+    margin: 10px 0; }
 
 .img_row, #gifts_container .gift_results {
   margin: 15px 0; }

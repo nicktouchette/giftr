@@ -86,6 +86,10 @@ label {
     margin: 10px 0 10px 0;
 }
 
+.section_title {
+  margin-bottom: 20px;
+}
+
 // Home styles
 
 .tagline {
@@ -139,6 +143,21 @@ label {
 
 h2.inline {
   margin-right: 15px;
+}
+
+.profile_info {
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+
+  margin: 10px 0 10px 10px;
+
+
+  p {
+    margin: 10px 0;
+  }
 }
 
 .img_row {
@@ -301,7 +320,6 @@ h2.inline {
 
   .gift_results {
     @extend .img_row;
-
   }
 }
 

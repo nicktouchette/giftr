@@ -1,16 +1,17 @@
 extends layout
 
 block content
-  .center
-    h1.tagline Find the perfect gift for...
-    ul.events
-      li.emoji <span>💔</span> Valentine's Day
-      li.emoji <span>🎂</span> Birthdays
-      li.emoji <span>🎄</span> Christmas
-      li.emoji <span>💍</span> Anniversaries
-      li.emoji <span>🗓</span> Anyday
-    .signup_buttons
-      - if (!currentUser)
-        a(class="btn", href='/signup') Sign Up
-        a(class="btn", href='/login') Log In
+  #hero
+    .center
+      h1.tagline Find the perfect gift for...
+      ul.events
+        li.emoji <span>💔</span> Valentine's Day
+        li.emoji <span>🎂</span> Birthdays
+        li.emoji <span>🎄</span> Christmas
+        li.emoji <span>💍</span> Anniversaries
+        li.emoji <span>🗓</span> Anyday
+      .signup_buttons
+        - if (!currentUser)
+          a(class="btn", href='/signup') Sign Up
+          a(class="btn", href='/login') Log In
 

@@ -4,16 +4,17 @@ block content
   - if (user.id === currentUser.id || currentUser.permission === 'admin')
       a(href= "/users/" + user.id + "/edit", class="option-btn") Edit
   br
-  img(src="http://placehold.it/100x100", class="profile_img")
-  p Email:
-    = ' ' + user.local.email
-  p Username:
-   = ' ' + user.userName
-  p Location:
-   = ' ' + user.location
+  .profile_info
+    img(src="http://placehold.it/100x100", class="profile_img")
+    p <strong>Email:</strong>
+      = ' ' + user.local.email
+    p <strong>Username:</strong>
+     = ' ' + user.userName
+    p <strong>Location:</strong>
+     = ' ' + user.location
   #gifts_container
     .img_row
-      h3 Favorite Gifts
+      h3.section_title Favorite Gifts
       -for(i=0;i < 5 && i < favorites.length; i++)
         .gift
           a(href="/gifts/" + favorites[favorites.length - 1 - i].id)
@@ -24,5 +25,7 @@ block content
               p(class="gift_price")
                 = "$" + favorites[favorites.length - 1 - i].price + ".00"
           //- a(class="fav_btn") Remove
+    h3.section_title Recent Results
     .gift_results
-      h3 Recent Results
+
+
