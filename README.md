@@ -5,7 +5,7 @@ Sue,
 Nick
 
 Deployed App:  
-[Heroku](https://evening-gorge-84916.herokuapp.com/)
+[Heroku](https://app-giftr.herokuapp.com/)
 
 Trello Board:  
 [Trello](https://trello.com/b/reOpIKzG/project-3)
